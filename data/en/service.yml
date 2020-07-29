@@ -14,7 +14,7 @@ service:
       content : Lorem ipsum dolor sit amet, consectetur.. Sed id lorem eget orci dictum facilisis vel id tellus.Nullam iaculis arcu at mauris dapibus consectetur.
       
     # service item loop
-    - name : Networking
+    - name : Computer Training
       icon : ti-blackboard # themify icon pack : https://themify.me/themify-icons
       content : Lorem ipsum dolor sit amet, consectetur.. Sed id lorem eget orci dictum facilisis vel id tellus.Nullam iaculis arcu at mauris dapibus consectetur.
       

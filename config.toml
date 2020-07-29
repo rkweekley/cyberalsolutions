@@ -1,6 +1,6 @@
 ################################# Default configuration ###################
 baseURL = "https://examplesite.com"
-title = "Meghna"
+title = "Cyberal Solutions"
 theme = "meghna-hugo"
 # post pagination
 paginate = "6"
@@ -51,25 +51,25 @@ name = "services"
 URL = "services"
 weight = 2
 
-[[menu.main]]
-name = "portfolio"
-URL = "portfolio"
-weight = 3
+#[[menu.main]]
+#name = "portfolio"
+#URL = "portfolio"
+#weight = 3
 
-[[menu.main]]
-name = "team"
-URL = "team"
-weight = 4
+#[[menu.main]]
+#name = "team"
+#URL = "team"
+#weight = 4
 
-[[menu.main]]
-name = "pricing"
-URL = "pricing"
-weight = 5
+#[[menu.main]]
+#name = "pricing"
+##URL = "pricing"
+#weight = 5
 
-[[menu.main]]
-name = "blog"
-URL = "blog"
-weight = 6
+#[[menu.main]]
+#name = "blog"
+#URL = "blog"
+#weight = 6
 
 [[menu.main]]
 name = "contact"
@@ -77,10 +77,10 @@ URL = "contact"
 weight = 7
 
 #### external / static link ####
-[[menu.static]]
-name = "themefisher"
-URL = "https://themefisher.com/"
-weight = 8
+#[[menu.static]]
+#name = "themefisher"
+#URL = "https://themefisher.com/"
+#weight = 8
 
 ############################# Default Parameters ##########################
 [params]
@@ -140,12 +140,3 @@ contentDir = "content/english"
 weight = 1
 home = "Home"
 copyright = "copyright &copy; 2020 [gethugothemes](https://gethugothemes.com) all right reserved"
-
-################################ France Language ########################
-[Languages.fr]
-languageName = "Fr"
-languageCode = "fr-fr"
-contentDir = "content/french"
-weight = 2
-home = "Accueil"
-copyright = "copyright &copy; 2020 [gethugothemes](https://gethugothemes.com) tous droits réservés"
