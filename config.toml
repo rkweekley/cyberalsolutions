@@ -1,5 +1,5 @@
 ################################# Default configuration ###################
-baseURL = "https://examplesite.com"
+baseURL = "https://cyberalsolutions.com"
 title = "Cyberal Solutions"
 theme = "meghna-hugo"
 # post pagination
@@ -139,4 +139,4 @@ languageCode = "en-us"
 contentDir = "content/english"
 weight = 1
 home = "Home"
-copyright = "copyright &copy; 2020 [gethugothemes](https://gethugothemes.com) all right reserved"
+copyright = "copyright &copy; 2020 Cyberal Solutions LLC all right reserved"

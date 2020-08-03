@@ -3,14 +3,14 @@ about:
   enable : true
   title : About Us
   about_item :
-  - icon : ti-ruler-pencil # themify icon pack : https://themify.me/themify-icons
-    title : We're Creative
-    content : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nihil, libero, perspiciatis eos provident laborum eum dignissimos.
+  - icon : ti-home # themify icon pack : https://themify.me/themify-icons
+    title : Community Minded
+    content : "We want to help connect you with the technology of today. Whether you are wanting to learn about the newest tech coming out, trying to navigate how to hook up your new printer or fill out forms online for the first time; we are here for you. We provide a variety of services from building customized gaming computers to making your older computer run like new. We love the community we live in and are here to help you with all things tech."
 
-  - icon : ti-cup # themify icon pack : https://themify.me/themify-icons
-    title : We're Professional
-    content : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nihil, libero, perspiciatis eos provident laborum eum dignissimos.
+  - icon : ti-stats-up # themify icon pack : https://themify.me/themify-icons
+    title : Business Savvy
+    content : "Cyberal Solutions is the solution to your IT needs! Need a one time project done? We have you covered. Want someone on retainer for all your in house needs? We have you covered. We offer services from weekly office clean ups to vulnerability assessments and server administration. We have worked with all types of businesses and are confident we can meet your IT needs."
 
   - icon : ti-thought # themify icon pack : https://themify.me/themify-icons
     title : We're Genius
-    content : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nihil, libero, perspiciatis eos provident laborum eum dignissimos.
+    content : ""

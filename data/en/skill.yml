@@ -3,7 +3,7 @@ skill:
   enable : true
   title : Our Skills
   subtitle : We are skilled in wide range of web and information technology skills.
-  content : Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis magni explicabo cum aperiam recusandae sunt accusamus totam. Quidem quos fugiat sapiente numquam accusamus quas hic, itaque in libero reiciendis tempora!
+  content : We can assist in all of your information technology needs. We are adept in web design, network installation and trouble shooting, vulnerabily assesments, and computer repair. 
   image : images/about/company-growth.webp
   skill_item :
     # skill item loop
