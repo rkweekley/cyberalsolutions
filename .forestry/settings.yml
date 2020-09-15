@@ -10,11 +10,6 @@ sections:
   create: all
   match: "*"
 - type: directory
-  path: content/french
-  label: French
-  create: all
-  match: "**/*"
-- type: directory
   path: content/english
   label: English
   create: all
