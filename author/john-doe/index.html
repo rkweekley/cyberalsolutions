@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
 	<meta charset="utf-8">
 	<title>John Doe</title>
 
@@ -11,36 +11,31 @@
 	<meta name="author" content="Themefisher">
 	
 	
-        <meta name="theme-name" content="meghna-hugo" />
-	<meta name="generator" content="Hugo 0.145.0">
+        <meta name="theme-name" content="site-theme" />
+      <meta name="generator" content="Static">
 
 	<!-- plugins -->
 	
-	<link rel="stylesheet" href="http://localhost:1313/plugins/bootstrap/bootstrap.min.css">
-	
-	<link rel="stylesheet" href="http://localhost:1313/plugins/themify-icons/themify-icons.css">
-	
-	<link rel="stylesheet" href="http://localhost:1313/plugins/magnific-popup/magnific-popup.css">
-	
-	<link rel="stylesheet" href="http://localhost:1313/plugins/slick/slick.css">
-	
+  
+  <link rel="stylesheet" href="../../plugins/themify-icons/themify-icons.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anaheim%7cQuattrocento&#43;Sans:400,700&amp;display=swap">
 	
 
 	<!-- Main Stylesheet -->
 	
-	<link rel="stylesheet" href="http://localhost:1313/css/style.min.css" media="screen">
+  <link rel="stylesheet" href="../../css/style.min.css" media="screen">
 
-	<!-- Custom stylesheet - for your changes -->
-	
-  <link rel="stylesheet" href="http://localhost:1313/css/custom.min.css" media="screen">
+  <!-- Custom stylesheet - for your changes -->
+  
+  <link rel="stylesheet" href="../../css/custom.min.css" media="screen">
 
 	<!--Favicon-->
-	<link rel="shortcut icon" href="http://localhost:1313/images/favicon.png" type="image/x-icon">
-	<link rel="icon" href="http://localhost:1313/images/favicon.png" type="image/x-icon">
+  <link rel="shortcut icon" href="../../images/favicon.png" type="image/x-icon">
+  <link rel="icon" href="../../images/favicon.png" type="image/x-icon">
 
 	
 
+  <script src="/js/include-partials.js" defer></script>
 </head>
 
 
@@ -51,7 +46,7 @@
 <div class="preloader">
   
   
-    <img src="/images/logo.png" alt="preloader">
+    <img src="../../images/logo.png" alt="preloader">
 
 
   
@@ -60,86 +55,26 @@
 
 
 
-<section class="sticky-top navigation">
-  <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-dark">
-      <a class="navbar-brand p-0" href="/">
-        
-        
-    <img src="/images/logo.png" alt="Cyberal Solutions" class="lozad">
 
-
-        
-      </a>
-      <button
-        class="navbar-toggler rounded-0"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navigation">
-        <ul class="navbar-nav ml-auto">
-          
-               
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              
-              href="/about"
-              >about</a
-            >
-          </li>
-               
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              
-              href="/services"
-              >services</a
-            >
-          </li>
-               
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              
-              href="/contact"
-              >contact</a
-            >
-          </li>
-           
-        </ul>
-        
-      </div>
-    </nav>
-  </div>
-</section>
+<div data-include="/partials/header.html"></div>
 
 
 <section class="section section-bg">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-10 mx-auto">
+ 	<div class="container">
+ 		<div class="grid">
+ 			<div class="mx-auto lg:w-10/12">
 				<div class="title text-center">
-					<h2> About <span class="color">
-							 author  </span></h2>
+					<h2> About <span class="text-primary">
+						 author  </span></h2>
 					<div class="border-meghna"></div>
 				</div>
 				<div class="content text-center">
-					<figure>
-						
-						<img class="rounded-circle img-fluid lozad"
-							data-src="https://www.gravatar.com/avatar/3733c078494c641de31e3b56dfc7ec5e?s=128&pg&d=identicon">
-						
-						<figcaption>
-							<h5 class="font-weight-bold">
-								John Doe
-							</h5>
-						</figcaption>
-					</figure>
+          <figure>
+            <img class="lozad rounded-full mx-auto w-32 h-32 object-cover" src="https://www.gravatar.com/avatar/3733c078494c641de31e3b56dfc7ec5e?s=128&pg&d=identicon" alt="John Doe avatar">
+            <figcaption>
+              <h5 class="font-semibold mt-3">John Doe</h5>
+            </figcaption>
+          </figure>
 					<hr>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet vulputate augue. Duis auctor lacus id vehicula gravida. Nam suscipit vitae purus et laoreet.
 Donec nisi dolor, consequat vel pretium id, auctor in dui. Nam iaculis, neque ac ullamcorper.</p>
@@ -148,13 +83,13 @@ Donec nisi dolor, consequat vel pretium id, auctor in dui. Nam iaculis, neque ac
 					<ul class="list-inline">
 						
 						<li class="list-inline-item"><a class="simple-icon" href="#"><i
-									class="ti-facebook"></i></a></li>
+								class="ti-facebook"></i></a></li>
 						
 						<li class="list-inline-item"><a class="simple-icon" href="#"><i
-									class="ti-twitter-alt"></i></a></li>
+								class="ti-twitter-alt"></i></a></li>
 						
 						<li class="list-inline-item"><a class="simple-icon" href="#"><i
-									class="ti-github"></i></a></li>
+								class="ti-github"></i></a></li>
 						
 					</ul>
 				</div>
@@ -164,215 +99,154 @@ Donec nisi dolor, consequat vel pretium id, auctor in dui. Nam iaculis, neque ac
 </section>
 
 <section class="section">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
+ 	<div class="container">
+ 		<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+ 			<div class="col-span-full">
 				<div class="title text-center">
-					<h2> Author's <span class="color">
-							 posts </h2>
+					<h2> Author's <span class="text-primary">
+						 posts </h2>
 					<div class="border-meghna"></div>
 				</div>
 			</div>
 			
-			<article class="col-lg-4 col-md-6 col-12 clearfix wow fadeInUp mb-4" data-wow-duration="500ms">
+ 			<article aria-labelledby="are-you-doing-the-right-way-heading" role="article" class="clearfix wow fadeInUp mb-4" data-wow-duration="500ms">
   <div class="post-block">
     <div class="media-wrapper">
       
-    <img src="/images/blog/blog-post-2.webp" alt="Image" class="img-fluid lozad">
+    <img src="../../images/blog/blog-post-2.webp" alt="Image" class="lozad w-full h-auto">
 
 
     </div>
 
     <div class="content">
-      <h3><a href="http://localhost:1313/blog/simple-blog-post-8/">Are You Doing the Right Way</a></h3>
-      <p><p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p></p>
-      <a class="btn btn-transparent" href="http://localhost:1313/blog/simple-blog-post-8/">Read more</a>
+      <h3 id="are-you-doing-the-right-way-heading"><a href="../../blog/simple-blog-post-8/index.html">Are You Doing the Right Way</a></h3>
+      <div class="excerpt"><p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p></div>
+      <a  class="btn btn-ghost" href="../../blog/simple-blog-post-8/index.html" aria-label="Read more: Are You Doing the Right Way">Read more</a>
     </div>
   </div>
 </article>
 
-			
-			<article class="col-lg-4 col-md-6 col-12 clearfix wow fadeInUp mb-4" data-wow-duration="500ms">
+ 			
+ 			<article aria-labelledby="simple-blog-post-heading" role="article" class="clearfix wow fadeInUp mb-4" data-wow-duration="500ms">
   <div class="post-block">
     <div class="media-wrapper">
       
-    <img src="/images/blog/blog-post-3.webp" alt="Image" class="img-fluid lozad">
+    <img src="../../images/blog/blog-post-3.webp" alt="Image" class="lozad w-full h-auto">
 
 
     </div>
 
     <div class="content">
-      <h3><a href="http://localhost:1313/blog/simple-blog-post-1/">Simple Blog Post</a></h3>
-      <p><p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p></p>
-      <a class="btn btn-transparent" href="http://localhost:1313/blog/simple-blog-post-1/">Read more</a>
+      <h3 id="simple-blog-post-heading"><a href="../../blog/simple-blog-post-1/index.html">Simple Blog Post</a></h3>
+      <div class="excerpt"><p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p></div>
+      <a  class="btn btn-ghost" href="../../blog/simple-blog-post-1/index.html" aria-label="Read more: Simple Blog Post">Read more</a>
     </div>
   </div>
 </article>
 
-			
-			<article class="col-lg-4 col-md-6 col-12 clearfix wow fadeInUp mb-4" data-wow-duration="500ms">
+ 			
+ 			<article aria-labelledby="simple-blog-post-heading" role="article" class="clearfix wow fadeInUp mb-4" data-wow-duration="500ms">
   <div class="post-block">
     <div class="media-wrapper">
       
-    <img src="/images/blog/blog-post-2.webp" alt="Image" class="img-fluid lozad">
+    <img src="../../images/blog/blog-post-2.webp" alt="Image" class="lozad w-full h-auto">
 
 
     </div>
 
     <div class="content">
-      <h3><a href="http://localhost:1313/blog/simple-blog-post-2/">Simple Blog Post</a></h3>
-      <p><p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p></p>
-      <a class="btn btn-transparent" href="http://localhost:1313/blog/simple-blog-post-2/">Read more</a>
+      <h3 id="simple-blog-post-heading"><a href="../../blog/simple-blog-post-2/index.html">Simple Blog Post</a></h3>
+      <div class="excerpt"><p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p></div>
+      <a  class="btn btn-ghost" href="../../blog/simple-blog-post-2/index.html" aria-label="Read more: Simple Blog Post">Read more</a>
     </div>
   </div>
 </article>
 
-			
-			<article class="col-lg-4 col-md-6 col-12 clearfix wow fadeInUp mb-4" data-wow-duration="500ms">
+ 			
+ 			<article aria-labelledby="simple-blog-post-heading" role="article" class="clearfix wow fadeInUp mb-4" data-wow-duration="500ms">
   <div class="post-block">
     <div class="media-wrapper">
       
-    <img src="/images/blog/blog-post-1.webp" alt="Image" class="img-fluid lozad">
+    <img src="../../images/blog/blog-post-1.webp" alt="Image" class="lozad w-full h-auto">
 
 
     </div>
 
     <div class="content">
-      <h3><a href="http://localhost:1313/blog/simple-blog-post-3/">Simple Blog Post</a></h3>
-      <p><p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p></p>
-      <a class="btn btn-transparent" href="http://localhost:1313/blog/simple-blog-post-3/">Read more</a>
+      <h3 id="simple-blog-post-heading"><a href="../../blog/simple-blog-post-3/index.html">Simple Blog Post</a></h3>
+      <div class="excerpt"><p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p></div>
+      <a  class="btn btn-ghost" href="../../blog/simple-blog-post-3/index.html" aria-label="Read more: Simple Blog Post">Read more</a>
     </div>
   </div>
 </article>
 
-			
-			<article class="col-lg-4 col-md-6 col-12 clearfix wow fadeInUp mb-4" data-wow-duration="500ms">
+ 			
+ 			<article aria-labelledby="simple-blog-post-heading" role="article" class="clearfix wow fadeInUp mb-4" data-wow-duration="500ms">
   <div class="post-block">
     <div class="media-wrapper">
       
-    <img src="/images/blog/blog-post-3.webp" alt="Image" class="img-fluid lozad">
+    <img src="../../images/blog/blog-post-3.webp" alt="Image" class="lozad w-full h-auto">
 
 
     </div>
 
     <div class="content">
-      <h3><a href="http://localhost:1313/blog/simple-blog-post-4/">Simple Blog Post</a></h3>
-      <p><p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p></p>
-      <a class="btn btn-transparent" href="http://localhost:1313/blog/simple-blog-post-4/">Read more</a>
+      <h3 id="simple-blog-post-heading"><a href="../../blog/simple-blog-post-4/index.html">Simple Blog Post</a></h3>
+      <div class="excerpt"><p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p></div>
+      <a  class="btn btn-ghost" href="../../blog/simple-blog-post-4/index.html" aria-label="Read more: Simple Blog Post">Read more</a>
     </div>
   </div>
 </article>
 
-			
-			<article class="col-lg-4 col-md-6 col-12 clearfix wow fadeInUp mb-4" data-wow-duration="500ms">
+ 			
+ 			<article aria-labelledby="simple-blog-post-heading" role="article" class="clearfix wow fadeInUp mb-4" data-wow-duration="500ms">
   <div class="post-block">
     <div class="media-wrapper">
       
-    <img src="/images/blog/blog-post-2.webp" alt="Image" class="img-fluid lozad">
+    <img src="../../images/blog/blog-post-2.webp" alt="Image" class="lozad w-full h-auto">
 
 
     </div>
 
     <div class="content">
-      <h3><a href="http://localhost:1313/blog/simple-blog-post-5/">Simple Blog Post</a></h3>
-      <p><p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p></p>
-      <a class="btn btn-transparent" href="http://localhost:1313/blog/simple-blog-post-5/">Read more</a>
+      <h3 id="simple-blog-post-heading"><a href="../../blog/simple-blog-post-5/index.html">Simple Blog Post</a></h3>
+      <div class="excerpt"><p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p></div>
+      <a  class="btn btn-ghost" href="../../blog/simple-blog-post-5/index.html" aria-label="Read more: Simple Blog Post">Read more</a>
     </div>
   </div>
 </article>
 
-			
-			<article class="col-lg-4 col-md-6 col-12 clearfix wow fadeInUp mb-4" data-wow-duration="500ms">
+ 			
+ 			<article aria-labelledby="simple-blog-post-heading" role="article" class="clearfix wow fadeInUp mb-4" data-wow-duration="500ms">
   <div class="post-block">
     <div class="media-wrapper">
       
-    <img src="/images/blog/blog-post-3.webp" alt="Image" class="img-fluid lozad">
+    <img src="../../images/blog/blog-post-3.webp" alt="Image" class="lozad w-full h-auto">
 
 
     </div>
 
     <div class="content">
-      <h3><a href="http://localhost:1313/blog/simple-blog-post-7/">Simple Blog Post</a></h3>
-      <p><p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p></p>
-      <a class="btn btn-transparent" href="http://localhost:1313/blog/simple-blog-post-7/">Read more</a>
+      <h3 id="simple-blog-post-heading"><a href="../../blog/simple-blog-post-7/index.html">Simple Blog Post</a></h3>
+      <div class="excerpt"><p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p></div>
+      <a  class="btn btn-ghost" href="../../blog/simple-blog-post-7/index.html" aria-label="Read more: Simple Blog Post">Read more</a>
     </div>
   </div>
 </article>
 
-			
-		</div>
-	</div>
+ 			
+ 		</div>
+ 	</div>
 </section>
 
   </div><!-- end Contact Area -->
-<footer id="footer" class="section-bg">
-	<div class="container">
-		<div class="row wow fadeInUp" data-wow-duration="500ms">
-			<div class="col-xl-12">
-
-				<!-- Footer Social Links -->
-				<div class="social-icon">
-					<ul class="list-inline">
-						
-						<li class="list-inline-item"><a href="#"><i class="ti-facebook"></i></a></li>
-						
-						<li class="list-inline-item"><a href="#"><i class="ti-twitter-alt"></i></a></li>
-						
-						<li class="list-inline-item"><a href="#"><i class="ti-youtube"></i></a></li>
-						
-						<li class="list-inline-item"><a href="#"><i class="ti-linkedin"></i></a></li>
-						
-						<li class="list-inline-item"><a href="#"><i class="ti-dribbble"></i></a></li>
-						
-						<li class="list-inline-item"><a href="#"><i class="ti-pinterest"></i></a></li>
-						
-					</ul>
-				</div>
-
-				<!-- copyright -->
-				<div class="copyright text-center">
-					<a href="http://localhost:1313/">
-						
-    <img src="/images/logo.png" alt="Cyberal Solutions">
-
-
-					</a>
-					<br>
-					<p></p>
-				</div>
-			</div>
-		</div>
-	</div>
-</footer>
+<div data-include="/partials/footer.html"></div>
 <!-- /footer -->
-
-<!-- Google Map API -->
-
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>
-
-
-<!-- JS Plugins -->
-
-<script src="http://localhost:1313/plugins/jquery/jquery.min.js"></script>
-
-<script src="http://localhost:1313/plugins/bootstrap/bootstrap.min.js"></script>
-
-<script src="http://localhost:1313/plugins/slick/slick.min.js"></script>
-
-<script src="http://localhost:1313/plugins/shuffle/shuffle.min.js"></script>
-
-<script src="http://localhost:1313/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
-
-<script src="http://localhost:1313/plugins/lazy-load/lozad.min.js"></script>
-
-<script src="http://localhost:1313/plugins/google-map/map.js"></script>
-
-
-<!-- Main Script -->
-
-<script src="http://localhost:1313/js/script.min.ab3836b70bc45170e8ff6dd572ee5e8e761ac8376daf9ceb40f760dfb6f2cce49672517da770a0049959f5fc93337e13.js" integrity="sha384-qzg2twvEUXDo/23Vcu5ejnYayDdtr5zrQPdg37byzOSWclF9p3CgBJlZ9fyTM34T"></script>
-
 
 </body>
 
 </html>
+
+
+
+
