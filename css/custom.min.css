@@ -211,6 +211,12 @@ body{
 .blog-card .excerpt{color:var(--muted);font-size:.95rem;margin:0}
 .blog-card .btn{margin-top:auto;width:100%;text-align:center;display:block}
 .blog-pagination{display:flex;justify-content:center;flex-wrap:wrap;gap:.5rem;margin-top:2rem}
+.blog-pagination .page-item{display:flex}
+.blog-pagination .page-link{display:inline-flex;align-items:center;justify-content:center;min-width:2.5rem;height:2.5rem;padding:0 .875rem;margin-right:0;border-radius:.65rem;background:#1f242b;border:1px solid rgba(236,239,241,.16);color:#aab5c0;font-weight:700;line-height:1;transition:all .2s ease;box-shadow:none}
+.blog-pagination .page-link:hover{background:rgba(87,203,204,.18);border-color:var(--accent);color:#e9f4f6}
+.blog-pagination .page-link:focus{outline:none;box-shadow:0 0 0 3px rgba(87,203,204,.24)}
+.blog-pagination .page-item.active .page-link{background:var(--accent);border-color:var(--accent);color:#fff}
+.blog-pagination .page-item.disabled .page-link{background:#171b21;border-color:rgba(236,239,241,.08);color:#5f6a74;cursor:not-allowed;opacity:.6;pointer-events:none}
 .blog-post{padding:0 0 3rem}
 .blog-post__header{padding:3rem 0;background-color:rgba(15,20,27,0.92);text-align:center;margin-bottom:2rem}
 .blog-post__meta{display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem;color:var(--muted);font-size:.875rem}
