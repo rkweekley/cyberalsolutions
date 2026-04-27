@@ -29,18 +29,31 @@
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "LocalBusiness",
+          "@type": ["LocalBusiness", "ProfessionalService"],
+          "@id": "https://cyberalsolutions.com/#business",
           "name": "Cyberal Solutions",
+          "description": "Managed IT, cybersecurity, backup, and Microsoft 365 support for small businesses, ministries, and non-profits in southeast Ohio.",
           "url": "https://cyberalsolutions.com/",
           "logo": "https://cyberalsolutions.com/images/logo.png",
           "image": "https://cyberalsolutions.com/images/logo.png",
           "telephone": "+1-740-538-3553",
+          "email": "info@cyberalsolutions.com",
+          "priceRange": "$$",
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "Beverly",
             "addressRegion": "OH",
             "addressCountry": "US"
-          }
+          },
+          "areaServed": [
+            { "@type": "City", "name": "Beverly, OH" },
+            { "@type": "City", "name": "Marietta, OH" },
+            { "@type": "AdministrativeArea", "name": "Washington County, OH" },
+            { "@type": "State", "name": "Ohio" }
+          ],
+          "sameAs": [
+            "https://www.facebook.com/635879417023290"
+          ]
         },
         {
           "@type": "WebSite",
@@ -58,9 +71,12 @@
 
   <section class="hero-area bg-cover bg-center bg-hero">
     <div class="container mx-auto py-24 text-center text-base-100">
-      <h1 class="text-4xl md:text-5xl font-bold">Cyberal Solutions</h1>
-      <p class="mt-4 text-lg md:text-xl">We provide practical IT solutions for businesses and individuals.</p>
-      <a href="#services" class="btn btn-primary mt-6 inline-block">Explore Us</a>
+      <h1 class="text-4xl md:text-5xl font-bold">Practical IT &amp; Cybersecurity for Southeast Ohio</h1>
+      <p class="mt-4 text-lg md:text-xl">Managed IT, security, and Microsoft 365 support for small businesses, ministries, and non-profits &mdash; without the enterprise price tag.</p>
+      <div class="mt-6 flex flex-wrap justify-center gap-3">
+        <a href="#contact" class="btn btn-primary inline-block">Get a Free IT Review</a>
+        <a href="tel:+17405383553" class="btn btn-ghost inline-block">Call (740) 538-3553</a>
+      </div>
     </div>
   </section>
 
@@ -95,8 +111,8 @@
           <div class="block">
             <div class="icon-box"><i class="ti-thought"></i></div>
             <div class="content text-center">
-              <h3>Trusted Support</h3>
-              <p>Decades of IT experience backing responsive help desk support for teams of any size.</p>
+              <h3>Straight Talk</h3>
+              <p>Plain-English answers, fixed-fee pricing, and real people on the phone &mdash; no ticket-mill runaround.</p>
             </div>
           </div>
         </div>
@@ -108,36 +124,36 @@
     <div class="container mx-auto grid md:grid-cols-2 gap-8 items-center">
       <div class="h-80 bg-cover bg-center rounded-lg bg-about-design"></div>
       <div>
-        <span class="text-sm text-primary font-semibold">Managed Services</span>
-        <h2 class="text-2xl font-bold mt-3">We’re Your Proactive IT Partner.</h2>
-        <p class="mt-3 text-base">We handle the day-to-day technology so your team can focus on growth. Expect fewer outages, stronger security, and fast support.</p>
+        <span class="text-sm text-primary font-semibold">Why Cyberal</span>
+        <h2 class="text-2xl font-bold mt-3">Local. Senior. Accountable.</h2>
+        <p class="mt-3 text-base">You shouldn&rsquo;t need a Fortune 500 budget to get IT done right. We work with small organizations the same way we&rsquo;d secure our own &mdash; and we answer the phone when you call.</p>
         <div class="grid md:grid-cols-2 gap-4 mt-6">
           <div class="flex gap-3 items-center">
-            <i class="ti-check text-primary"></i>
+            <i class="ti-location-pin text-primary"></i>
             <div>
-              <h4 class="font-semibold">24/7 Monitoring</h4>
-              <p class="text-sm text-muted">Early detection and quick remediation before issues spread.</p>
+              <h4 class="font-semibold">Local to Southeast Ohio</h4>
+              <p class="text-sm text-muted">On-site when you need us, remote when you don&rsquo;t.</p>
+            </div>
+          </div>
+          <div class="flex gap-3 items-center">
+            <i class="ti-user text-primary"></i>
+            <div>
+              <h4 class="font-semibold">Senior-Led Support</h4>
+              <p class="text-sm text-muted">You talk to an engineer, not a script reader.</p>
+            </div>
+          </div>
+          <div class="flex gap-3 items-center">
+            <i class="ti-receipt text-primary"></i>
+            <div>
+              <h4 class="font-semibold">Predictable Pricing</h4>
+              <p class="text-sm text-muted">Flat-rate plans &mdash; no surprise invoices after every fix.</p>
             </div>
           </div>
           <div class="flex gap-3 items-center">
             <i class="ti-shield text-primary"></i>
             <div>
-              <h4 class="font-semibold">Security & Compliance</h4>
-              <p class="text-sm text-muted">Patch management, endpoint protection, and policy guidance.</p>
-            </div>
-          </div>
-          <div class="flex gap-3 items-center">
-            <i class="ti-cloud text-primary"></i>
-            <div>
-              <h4 class="font-semibold">Backup & Recovery</h4>
-              <p class="text-sm text-muted">Reliable backups with tested restore plans and clear RTOs.</p>
-            </div>
-          </div>
-          <div class="flex gap-3 items-center">
-            <i class="ti-headphone-alt text-primary"></i>
-            <div>
-              <h4 class="font-semibold">Help Desk Support</h4>
-              <p class="text-sm text-muted">Responsive support that keeps users productive.</p>
+              <h4 class="font-semibold">Security-First by Default</h4>
+              <p class="text-sm text-muted">MFA, patching, and backups baked in &mdash; not upsells.</p>
             </div>
           </div>
         </div>
@@ -149,9 +165,9 @@
     <img src="images/backgrounds/bg-white-wall.jpg" alt="decorative background" class="hidden">
     <div class="container">
       <div class="text-center">
-        <h2>Full-Service Managed IT</h2>
-        <p>From monitoring to cybersecurity, we keep your business running smoothly.</p>
-        <a href="#contact" class="btn btn-primary page-scroll">Start a project with us</a>
+        <h2>Not Sure Where Your IT Stands?</h2>
+        <p>Get a free 30-minute review of your security, backups, and Microsoft 365 setup &mdash; no commitment, no sales pitch.</p>
+        <a href="#contact" class="btn btn-primary page-scroll">Book a Free Review</a>
       </div>
     </div>
   </section>
@@ -207,9 +223,9 @@
     <div class="container mx-auto">
       <div class="skills-band">
         <div class="skills-band__header">
-          <span class="skills-eyebrow">Managed Services Coverage</span>
-          <h2>Local IT, Built For Growing Businesses</h2>
-          <p>We deliver proactive protection and fast support so you can stay focused on your work, not your technology.</p>
+          <span class="skills-eyebrow">How We Work</span>
+          <h2>A Simple Path From &ldquo;Things Just Work&rdquo; to &ldquo;We&rsquo;ve Got You Covered.&rdquo;</h2>
+          <p>No 80-page proposals. We start small, prove value, and grow with you.</p>
           <div class="skills-metrics">
             <div>
               <div class="metric-value">24/7</div>
@@ -227,45 +243,45 @@
         </div>
         <div class="skills-flow">
           <div class="skills-step">
+            <span class="skills-step__icon ti-search"></span>
+            <div>
+              <h4>1. Discover</h4>
+              <p>Free 30-minute review of your environment, risks, and goals.</p>
+            </div>
+          </div>
+          <div class="skills-step">
+            <span class="skills-step__icon ti-clipboard"></span>
+            <div>
+              <h4>2. Plan</h4>
+              <p>A short, prioritized roadmap &mdash; quick wins first, big projects later.</p>
+            </div>
+          </div>
+          <div class="skills-step">
             <span class="skills-step__icon ti-settings"></span>
             <div>
-              <h4>Preventative Maintenance</h4>
-              <p>Patch management, tuning, and asset tracking to reduce downtime.</p>
+              <h4>3. Onboard</h4>
+              <p>We deploy monitoring, MFA, patching, and backups with minimal disruption.</p>
             </div>
           </div>
           <div class="skills-step">
-            <span class="skills-step__icon ti-shield"></span>
+            <span class="skills-step__icon ti-eye"></span>
             <div>
-              <h4>Security Protection</h4>
-              <p>Endpoint security, MFA, and safe access policies.</p>
-            </div>
-          </div>
-          <div class="skills-step">
-            <span class="skills-step__icon ti-cloud"></span>
-            <div>
-              <h4>Backup & Recovery</h4>
-              <p>Reliable backups with tested restore plans.</p>
-            </div>
-          </div>
-          <div class="skills-step">
-            <span class="skills-step__icon ti-signal"></span>
-            <div>
-              <h4>Network & Wi-Fi</h4>
-              <p>Secure routing, Wi-Fi optimization, and access controls.</p>
+              <h4>4. Monitor</h4>
+              <p>24/7 alerting and proactive maintenance so issues stay small.</p>
             </div>
           </div>
           <div class="skills-step">
             <span class="skills-step__icon ti-headphone-alt"></span>
             <div>
-              <h4>Help Desk Support</h4>
-              <p>Friendly, fast support for your team.</p>
+              <h4>5. Support</h4>
+              <p>Same-day help desk &mdash; phone, email, or messenger, your call.</p>
             </div>
           </div>
           <div class="skills-step">
-            <span class="skills-step__icon ti-briefcase"></span>
+            <span class="skills-step__icon ti-reload"></span>
             <div>
-              <h4>IT Planning</h4>
-              <p>Practical roadmaps and budgeting aligned to your goals.</p>
+              <h4>6. Review</h4>
+              <p>Monthly health reviews and a yearly plan refresh that fits your budget.</p>
             </div>
           </div>
         </div>
@@ -300,8 +316,12 @@
         </div>
       </div>
       <div class="text-center">
-        <p class="mb-4">Message us on Facebook Messenger for quick responses.</p>
-        <a class="btn btn-primary" href="https://m.me/635879417023290" target="_blank" rel="noopener">Open Messenger</a>
+        <p class="mb-4">Prefer to call or email? Either works &mdash; we usually reply within one business day. For quick questions, Facebook Messenger is fine too.</p>
+        <div class="flex flex-wrap justify-center gap-3">
+          <a class="btn btn-primary" href="tel:+17405383553">Call (740) 538-3553</a>
+          <a class="btn btn-ghost" href="mailto:info@cyberalsolutions.com">Email Us</a>
+          <a class="btn btn-ghost" href="https://m.me/635879417023290" target="_blank" rel="noopener">Open Messenger</a>
+        </div>
       </div>
     </div>
   </div>
