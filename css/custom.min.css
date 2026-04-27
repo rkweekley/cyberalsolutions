@@ -250,6 +250,9 @@ header nav a:hover:after{width:100%}
 .hero-area .btn{box-shadow:0 14px 30px var(--glow)}
 .hero-cta{margin-top:1.75rem;display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem;text-align:center}
 .hero-cta .btn{display:inline-flex;align-items:center;justify-content:center;min-width:12rem}
+.why-row{display:flex;align-items:flex-start;gap:.75rem}
+.why-icon{font-size:1.25rem;line-height:1.4;flex-shrink:0}
+.why-row h4{margin:0 0 .15rem 0;line-height:1.4}
 
 .title h2{font-size:clamp(1.75rem,2.6vw,2.5rem);text-transform:none}
 .border-meghna{width:40%}
