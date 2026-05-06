@@ -70,57 +70,54 @@
   <div class="container mx-auto px-4">
     <div class="max-w-3xl mx-auto blog-post__body">
       <div class="post-single-content">
-        <p>Most small-business breaches we read about every month start the same way: a known vulnerability, a patch that has been available for weeks, and nobody whose job it was to install it.</p>
-        <p>Patching is not glamorous, and it is rarely on a calendar. That is exactly why it slips. The good news is you do not need an enterprise tool stack to stay current — you need a small, predictable rhythm and one person who owns it.</p>
+        <p>Most small-business breaches start the same way: a known vulnerability, a patch that has been available for weeks, and no one tasked with installing it. Patching is rarely glamorous and rarely scheduled, which is why it slips.</p>
+        <p>You do not need enterprise tooling to stay current. You need a predictable rhythm and a single owner.</p>
         <h2>TL;DR</h2>
-        <p>Pick one recurring hour each month, patch in a fixed order (servers and network gear, then workstations, then apps), verify with a short checklist, and write down what you skipped and why. That is 80 percent of what enterprise patch management actually delivers.</p>
+        <p>Pick a recurring monthly window, patch in a fixed order (servers and network gear, then workstations, then third-party apps), verify with a short checklist, and document what you skipped and why. That captures most of what enterprise patch management actually delivers.</p>
         <h2>Why patching falls off</h2>
-        <p>For most small offices and ministries, the pattern is the same. Updates pop up at the worst possible time, someone clicks "remind me later," and a few months go by. When something does break, the fix often turns out to be a patch that was published last quarter.</p>
-        <ul>
-          <li>Nobody is named as the owner, so it becomes everyone's job and nobody's job.</li>
-          <li>Updates interrupt work mid-day, so users defer them indefinitely.</li>
-          <li>Network gear and printers get forgotten because they are "just working."</li>
-          <li>There is no record of what was patched, so the next time the question comes up, the answer is a guess.</li>
-        </ul>
+        <p>The pattern is consistent. Updates appear at inconvenient times, someone defers them, and a quarter passes. When something does break, the fix is often a patch that was published months earlier.</p>
+        <p>The root causes are usually the same: no named owner, mid-day interruptions that users dismiss, and network gear and printers that are quietly forgotten because they appear to be working. Without a record of what was patched, the next time the question comes up, the answer is a guess.</p>
         <h2>A simple monthly rhythm</h2>
-        <p>Patch Tuesday — the second Tuesday of the month — is when Microsoft and several other major vendors publish their updates. That gives you a natural anchor. Pick a window that works for your team, then keep it the same every month so it shows up on the calendar without being negotiated.</p>
-        <ul>
-          <li><strong>Second Wednesday, after hours:</strong> apply server, firewall, and network device updates. These are the highest-impact targets and they need a maintenance window anyway.</li>
-          <li><strong>Second Thursday, end of day:</strong> push workstation updates and reboot. A scheduled reboot at 5:30 PM with a friendly notice beats fighting with users at 10 AM.</li>
-          <li><strong>Third Monday morning:</strong> review third-party apps — browsers, PDF readers, accounting software, point-of-sale, line-of-business tools. These are often the vector attackers actually use.</li>
-        </ul>
+        <p>Patch Tuesday — the second Tuesday of the month — is when Microsoft and several other major vendors publish updates. Use it as your anchor and keep the same window each month so it lives on the calendar without negotiation.</p>
+        <p>A workable cadence: apply server, firewall, and network updates after hours on the second Wednesday; push workstation updates and reboots at end-of-day on the second Thursday; review third-party apps — browsers, PDF readers, accounting software, line-of-business tools — the following Monday morning.</p>
         <h2>What to actually patch</h2>
-        <p>Workstation operating systems are usually the first thing people think of, but they are not where most small-business compromises start. Build your list once and keep it short.</p>
-        <ul>
-          <li>Windows and macOS, including drivers for laptops that travel.</li>
-          <li>Microsoft 365 / Office, browsers (Chrome, Edge, Firefox), Adobe Reader, Zoom, Teams.</li>
-          <li>Servers and any virtual machines, including the hypervisor.</li>
-          <li>Firewalls, switches, access points, and the office router. Vendor security advisories for these have been busy in 2026.</li>
-          <li>Backup software and the backup appliance itself — the place attackers go second.</li>
-          <li>Line-of-business apps: accounting, scheduling, donor or member database, point-of-sale.</li>
-        </ul>
+        <p>Workstation operating systems are the obvious target, but they are rarely where compromises begin. Build a short, durable list and stick to it.</p>
+        <p>The essentials: Windows and macOS (including drivers on travel laptops); Microsoft 365, browsers, Adobe Reader, Zoom, and Teams; servers, virtual machines, and the hypervisor; firewalls, switches, access points, and the office router; backup software and any backup appliance; and your line-of-business apps — accounting, scheduling, donor or member databases, point-of-sale.</p>
         <h2>Verify, do not assume</h2>
-        <p>The most common patching failure we see is silent: the update was downloaded, the reboot never happened, and nobody noticed for six months. A two-minute verification at the end of each cycle prevents most of that.</p>
-        <ul>
-          <li>Spot-check three or four machines and confirm the build number changed.</li>
-          <li>Open the firewall admin page and confirm it shows the new firmware version.</li>
-          <li>Run a backup test the same week so you catch any update that broke the backup agent.</li>
-          <li>Write down anything you intentionally skipped — and a date you will revisit it.</li>
-        </ul>
-        <h2>What to do when a patch breaks something</h2>
-        <p>It happens. A printer driver update kills printing. A firewall firmware bumps a VPN client. The answer is not to stop patching; it is to stage. Pick one or two willing users as a pilot group and let their machines update a few days ahead of everyone else. If something breaks, you find out before it spreads to the whole office.</p>
+        <p>The most common patching failure is silent: the update downloaded, the reboot never happened, and no one noticed for months. A short verification step at the end of each cycle catches most of it.</p>
+        <p>Spot-check a handful of machines and confirm the build number changed. Open the firewall admin page and confirm the new firmware version. Run a backup test the same week to catch any update that broke a backup agent. Record anything you skipped on purpose, with a date to revisit.</p>
+        <h2>When a patch breaks something</h2>
+        <p>It happens. A printer driver update breaks printing. A firewall firmware bumps a VPN client. The answer is not to stop patching — it is to stage. Designate a small pilot group whose machines update a few days ahead of everyone else, and you will catch most regressions before they spread.</p>
         <h2>Emergencies are different</h2>
-        <p>The monthly rhythm covers normal updates. When a vendor publishes an out-of-band advisory — and 2026 has had plenty of those for firewalls, RMM tools, and common business apps — that is not a "next month" item. The rule of thumb we use:</p>
-        <ul>
-          <li>Critical, internet-exposed, actively exploited: same day.</li>
-          <li>Critical, internet-exposed, not yet exploited: within 48 hours.</li>
-          <li>High severity, internal only: include in the next monthly window.</li>
-        </ul>
-        <p>If you do not know which of your systems are internet-exposed, that is the first audit to run, before you worry about cadence.</p>
-        <h2>Make it boring on purpose</h2>
-        <p>The whole point is that patching should be the least interesting part of the month. A fixed window, a named owner, a short checklist, and a place to write down what you did. Done that way, it stops being a project and starts being a habit.</p>
-        <p>If your "patch rhythm" right now is whoever clicks the update prompt first, we can help you set up something simple and durable. <a href="https://cyberalsolutions.com/?utm_source=blog&amp;utm_medium=internal&amp;utm_campaign=patch-rhythm#contact">Free 30-minute IT review</a> — no pitch, just a clear picture of where you stand.</p>
+        <p>The monthly rhythm covers routine updates. Out-of-band advisories — and 2026 has produced plenty for firewalls, RMM platforms, and common business apps — do not wait for next month.</p>
+        <p>The rule we use: critical, internet-exposed, and actively exploited gets patched the same day; critical and internet-exposed but not yet exploited, within 48 hours; high-severity but internal-only, in the next monthly window. If you do not know which of your systems are internet-exposed, that inventory is the first thing to settle.</p>
+        <h2>Make it routine on purpose</h2>
+        <p>Patching should be the least interesting hour of the month: a fixed window, a named owner, a short checklist, a written record. Run it that way and it stops being a project and becomes a habit.</p>
+        <p>If you would like a second set of eyes on your current cadence, that is a normal part of our <a href="https://cyberalsolutions.com/?utm_source=blog&amp;utm_medium=internal&amp;utm_campaign=patch-rhythm#contact">free 30-minute IT review</a>.</p>
       </div>
+        <div class="social-share pt-4">
+  <a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcyberalsolutions.com%2Fblog%2Fsmall-business-patching-rhythm-that-sticks.html" target="_blank"
+    rel="noopener" aria-label="">
+    <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small">
+      <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z" />
+        </svg>
+      </div>
+    </div>
+  </a>
+  <a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?text=A%20Small-Business%20Patching%20Rhythm%20That%20Actually%20Sticks&amp;url=https%3A%2F%2Fcyberalsolutions.com%2Fblog%2Fsmall-business-patching-rhythm-that-sticks.html"
+    target="_blank" rel="noopener" aria-label="">
+    <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small">
+      <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path
+            d="M23.44 4.83c-.8.37-1.5.38-2.22.02.93-.56.98-.96 1.32-2.02-.88.52-1.86.9-2.9 1.1-.82-.88-2-1.43-3.3-1.43-2.5 0-4.55 2.04-4.55 4.54 0 .36.03.7.1 1.04-3.77-.2-7.12-2-9.36-4.75-.4.67-.6 1.45-.6 2.3 0 1.56.8 2.95 2 3.77-.74-.03-1.44-.23-2.05-.57v.06c0 2.2 1.56 4.03 3.64 4.44-.67.2-1.37.2-2.06.08.58 1.8 2.26 3.12 4.25 3.16C5.78 18.1 3.37 18.74 1 18.46c2 1.3 4.4 2.04 6.97 2.04 8.35 0 12.92-6.92 12.92-12.93 0-.2 0-.4-.02-.6.9-.63 1.96-1.22 2.56-2.14z" />
+        </svg>
+      </div>
+    </div>
+  </a>
+</div>
       <div class="mt-5">
       </div>
     </div>

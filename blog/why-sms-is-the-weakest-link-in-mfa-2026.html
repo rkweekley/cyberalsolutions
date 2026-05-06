@@ -70,50 +70,57 @@
   <div class="container mx-auto px-4">
     <div class="max-w-3xl mx-auto blog-post__body">
       <div class="post-single-content">
-        <p>Multi-factor authentication is the single best thing most small businesses and ministries can do to keep accounts from getting taken over. We say so often, and we mean it. But not every form of MFA is the same — and the most common one, the six-digit code that arrives by text message, is now the easiest to defeat.</p>
-        <p>If your bank, your email, your payroll, or your donation platform is still protected by a text-message code, this post is for you.</p>
+        <p>Multi-factor authentication is the single most effective control most organizations can apply to keep accounts from being taken over. We say so often, and we mean it. But not every form of MFA is equivalent — and the most common one, the six-digit code delivered by text message, is now the easiest to defeat.</p>
+        <p>If accounts that matter to your operation — banking, email, payroll, donation platforms — still rely on a text-message code, this post is for you.</p>
         <h2>TL;DR</h2>
-        <p>SMS-based MFA is better than nothing, but it is no longer enough on accounts that matter. Move banking, email, payroll, and admin accounts to a passkey or an authenticator app. Save SMS for low-risk logins where the platform offers nothing else.</p>
+        <p>SMS-based MFA is better than nothing, but it is no longer sufficient on accounts that matter. Move banking, email, payroll, and admin accounts to a passkey or authenticator app. Reserve SMS for low-risk logins where the platform offers nothing else.</p>
         <h2>Why SMS used to be fine — and isn't anymore</h2>
-        <p>For years, getting a code by text was a real upgrade over a password alone. Most attackers were guessing or reusing leaked passwords, and a one-time code stopped them cold.</p>
-        <p>Three things changed:</p>
-        <ul>
-          <li><strong>SIM-swap attacks got cheap.</strong> An attacker convinces (or pays) someone at a phone carrier to move your number to their SIM. Once your number is on their phone, every text code goes to them.</li>
-          <li><strong>Real-time phishing kits became standard.</strong> Modern phishing pages do not just steal your password — they relay your text-message code to the real site within seconds. You think you logged in. The attacker actually did.</li>
-          <li><strong>Number-porting and account-recovery flows leak codes.</strong> A surprising amount of "MFA bypass" is just abusing carrier customer-service or platform recovery options.</li>
-        </ul>
+        <p>For years, a code by text was a meaningful upgrade over a password alone. Most attackers were guessing or replaying leaked credentials, and a one-time code stopped them.</p>
+        <p>Three things shifted the landscape. SIM-swap attacks became cheap and routine, with attackers convincing or paying carrier staff to move a target's number to a new SIM. Real-time phishing kits became standard, capable of relaying a text-message code to the legitimate site within seconds of the user typing it. And number-porting and account-recovery flows continue to leak codes through carrier customer service and platform recovery options.</p>
         <h2>What actually works in 2026, in order</h2>
-        <p>If you change one thing this month, change this. Pick the strongest option each platform supports.</p>
-        <ul>
-          <li><strong>Passkeys.</strong> Built into iPhones, Androids, Macs, Windows, and most browsers. They use the device you already trust, are tied to the real website (so phishing sites cannot collect them), and there is nothing for an attacker to type. Microsoft, Google, Apple, most banks, and a growing list of business apps support them now. Free.</li>
-          <li><strong>Authenticator apps.</strong> Microsoft Authenticator, Google Authenticator, Authy, or 1Password. The code lives on your phone and never travels through the cell network. Phishing kits can still trick a user into typing one in, but SIM swaps stop working entirely.</li>
-          <li><strong>Hardware security keys.</strong> A small USB or NFC key (YubiKey is the common one) for high-risk accounts — your IT admin login, your domain registrar, your finance accounts. The most phishing-resistant option that exists.</li>
-          <li><strong>SMS.</strong> Last resort. Use it only when a platform offers no other option, and only for low-risk accounts.</li>
-        </ul>
+        <p>If you only change one thing this quarter, change this. Choose the strongest option each platform supports.</p>
+        <p>Passkeys are the strongest practical option. They are built into iPhones, Androids, Macs, Windows, and most browsers, tied to the legitimate site so phishing pages cannot collect them, and require nothing for an attacker to type. Microsoft, Google, Apple, most banks, and a growing list of business platforms support them.</p>
+        <p>Authenticator apps — Microsoft Authenticator, Google Authenticator, Authy, 1Password — keep the code on the device and out of the cell network. Phishing kits can still trick a user into typing one in, but SIM swaps stop working entirely.</p>
+        <p>Hardware security keys (YubiKey is the common example) are the most phishing-resistant option available and are worth the cost for the highest-risk accounts: IT admin, domain registrar, finance. SMS belongs at the bottom of the list, used only when no other factor is offered and only on low-risk accounts.</p>
         <h2>The accounts to fix first</h2>
-        <p>You do not need to migrate everything in a weekend. Start where the damage would be worst.</p>
-        <ul>
-          <li>Your business email — the master key for almost every other account's password reset.</li>
-          <li>Banking, payroll, and accounting (QuickBooks, Gusto, your bank's business portal).</li>
-          <li>Microsoft 365 or Google Workspace global admin accounts.</li>
-          <li>Donation, giving, or e-commerce platforms — where attackers can redirect funds.</li>
-          <li>Your domain registrar and DNS host. If an attacker controls your domain, they control your email and your website.</li>
-        </ul>
-        <h2>What about the codes you already get?</h2>
-        <p>Two practical guardrails while you migrate:</p>
-        <ul>
-          <li>Add a port-out PIN with your cell carrier. Verizon, AT&amp;T, and T-Mobile all offer one. It blocks casual SIM-swap attempts.</li>
-          <li>Treat any unexpected MFA code as a red flag. If you did not just try to log in, do not type the code anywhere — go change that password immediately.</li>
-        </ul>
+        <p>You do not need to migrate everything at once. Start where the damage from a takeover would be greatest.</p>
+        <p>Business email is the master key for password resets across nearly every other account, so it goes first. Then banking, payroll, and accounting (QuickBooks, Gusto, the bank's business portal). Microsoft 365 or Google Workspace global admin accounts. Donation, giving, or e-commerce platforms where attackers can redirect funds. And finally the domain registrar and DNS host — if an attacker controls the domain, they control email and the website.</p>
+        <h2>Practical guardrails while you migrate</h2>
+        <p>Add a port-out PIN with your cell carrier. Verizon, AT&amp;T, and T-Mobile all offer one, and it blocks the casual SIM-swap attempts.</p>
+        <p>Treat any unexpected MFA prompt as a red flag. If you did not just attempt to log in, do not approve or type the code — change the password immediately.</p>
         <h2>What to expect when you switch</h2>
-        <p>Setting up a passkey or authenticator app takes about five minutes per account. Most platforms now walk you through it. The friction shows up once: when you replace a phone, you re-enroll. Backup codes — printed and kept somewhere safe — make that painless.</p>
-        <p>If your team is going to balk at any of this, frame it as fewer interruptions, not more. A passkey is a tap-to-log-in. An authenticator app is faster than waiting for a text. The change is nearly always less work, not more.</p>
-        <h2>One more thing for ministries and small offices</h2>
-        <p>Shared accounts — the "office@" email everyone uses, the donation-platform login that three volunteers know — are where SMS MFA does the most damage. The phone number on those accounts is usually somebody's personal cell, often someone who left two years ago. Audit those first. If you cannot remove the shared login entirely, at least move the second factor onto an authenticator app on a phone the current administrator owns.</p>
+        <p>Setting up a passkey or authenticator app takes about five minutes per account, and most platforms walk you through the steps. The friction shows up once: when you replace a phone, you re-enroll. Printed backup codes stored somewhere safe make that painless.</p>
+        <p>If staff are likely to push back, frame the change as fewer interruptions, not more. A passkey is a single tap. An authenticator app is faster than waiting for a text. The day-to-day experience is almost always less work, not more.</p>
+        <h2>A note on shared accounts</h2>
+        <p>Shared logins — the office@ inbox several people use, the donation platform three volunteers can access — are where SMS MFA does the most damage. The phone number on the account is often someone's personal cell, sometimes someone who left the organization years ago.</p>
+        <p>Audit those accounts first. If a shared login cannot be eliminated, move the second factor onto an authenticator app on a phone the current administrator owns and document who that is.</p>
         <h2>The honest version</h2>
-        <p>SMS MFA is not "wrong." It is just no longer the bar. The accounts that would actually hurt you to lose deserve a stronger second factor, and in 2026 the stronger options are free, fast, and built into the devices you already use.</p>
-        <p>If you would like help walking through which accounts are still on SMS and what to move first, that is exactly what our <a href="https://cyberalsolutions.com/?utm_source=blog&amp;utm_medium=internal&amp;utm_campaign=sms-mfa-weakest-link#contact">free 30-minute IT review</a> is for. No pitch — just clear next steps.</p>
+        <p>SMS MFA is not wrong; it is simply no longer the bar. The accounts that would genuinely hurt to lose deserve a stronger second factor, and in 2026 the stronger options are free, fast, and built into the devices you already use.</p>
+        <p>If you would like help walking through which accounts are still on SMS and what to migrate first, that is what our <a href="https://cyberalsolutions.com/?utm_source=blog&amp;utm_medium=internal&amp;utm_campaign=sms-mfa-weakest-link#contact">free 30-minute IT review</a> covers.</p>
       </div>
+        <div class="social-share pt-4">
+  <a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcyberalsolutions.com%2Fblog%2Fwhy-sms-is-the-weakest-link-in-mfa-2026.html" target="_blank"
+    rel="noopener" aria-label="">
+    <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small">
+      <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z" />
+        </svg>
+      </div>
+    </div>
+  </a>
+  <a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?text=Why%20SMS%20Is%20the%20Weakest%20Link%20in%20MFA%20in%202026&amp;url=https%3A%2F%2Fcyberalsolutions.com%2Fblog%2Fwhy-sms-is-the-weakest-link-in-mfa-2026.html"
+    target="_blank" rel="noopener" aria-label="">
+    <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small">
+      <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path
+            d="M23.44 4.83c-.8.37-1.5.38-2.22.02.93-.56.98-.96 1.32-2.02-.88.52-1.86.9-2.9 1.1-.82-.88-2-1.43-3.3-1.43-2.5 0-4.55 2.04-4.55 4.54 0 .36.03.7.1 1.04-3.77-.2-7.12-2-9.36-4.75-.4.67-.6 1.45-.6 2.3 0 1.56.8 2.95 2 3.77-.74-.03-1.44-.23-2.05-.57v.06c0 2.2 1.56 4.03 3.64 4.44-.67.2-1.37.2-2.06.08.58 1.8 2.26 3.12 4.25 3.16C5.78 18.1 3.37 18.74 1 18.46c2 1.3 4.4 2.04 6.97 2.04 8.35 0 12.92-6.92 12.92-12.93 0-.2 0-.4-.02-.6.9-.63 1.96-1.22 2.56-2.14z" />
+        </svg>
+      </div>
+    </div>
+  </a>
+</div>
       <div class="mt-5"></div>
     </div>
   </div>
