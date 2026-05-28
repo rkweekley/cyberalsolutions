@@ -1,94 +1,101 @@
-<!-- Footer Navigation -->
-<footer id="footer" class="section-bg">
-  <div class="container">
-    <div class="grid gap-8 md:grid-cols-4 py-10 text-left">
-      <div>
-        <a href="/index.html"><img src="/images/logo.png" alt="Cyberal Solutions" class="lozad" style="max-height:48px;"></a>
-        <p class="text-sm text-muted mt-3">Managed IT &amp; cybersecurity for small businesses in southeast Ohio and the Mid-Ohio Valley.</p>
-        <p class="text-sm mt-3">
-          <a href="tel:+17403158211"><strong>(740) 315-8211</strong></a><br>
-          <a href="mailto:info@cyberalsolutions.com">info@cyberalsolutions.com</a><br>
-          Beverly, Ohio
-        </p>
-      </div>
-      <div>
-        <h4 class="font-semibold mb-3">Company</h4>
-        <ul class="text-sm space-y-2">
-          <li><a href="/">Home</a></li>
-          <li><a href="/about/">About</a></li>
-          <li><a href="/services/">Services</a></li>
-          <li><a href="/pricing/">Pricing</a></li>
-          <li><a href="/blog/">Blog</a></li>
-          <li><a href="/contact/">Contact</a></li>
-          <li><a href="/review/">Free IT Review</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="font-semibold mb-3">Services</h4>
-        <ul class="text-sm space-y-2">
-          <li><a href="/services/">Managed IT Support</a></li>
-          <li><a href="/services/">Managed Cybersecurity</a></li>
-          <li><a href="/services/">Microsoft 365 &amp; Cloud</a></li>
-          <li><a href="/services/">Backup &amp; Recovery</a></li>
-          <li><a href="/services/">Network Management</a></li>
-          <li><a href="/services/">IT Consulting / vCIO</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="font-semibold mb-3">Areas We Serve</h4>
-        <ul class="text-sm space-y-2">
-          <li>Marietta, OH</li>
-          <li>Beverly, OH</li>
-          <li>Devola, OH</li>
-          <li>Belpre, OH</li>
-          <li>Lower Salem, OH</li>
-          <li>Williamstown, WV</li>
-          <li>Parkersburg, WV</li>
-          <li>Vienna, WV</li>
-        </ul>
-      </div>
+<!-- Footer -->
+<style>
+  .site-footer { background:#0a2540; color:#cfd8e3; padding:48px 0 16px; margin-top:48px; }
+  .site-footer a { color:#cfd8e3; text-decoration:none; }
+  .site-footer a:hover { color:#fff; text-decoration:underline; }
+  .site-footer h4 { color:#fff; font-size:14px; font-weight:600; text-transform:uppercase;
+                    letter-spacing:.06em; margin:0 0 14px; }
+  .footer-grid { display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:32px;
+                 max-width:1140px; margin:0 auto; padding:0 20px; }
+  .footer-grid p, .footer-grid li { font-size:14px; line-height:1.7; }
+  .footer-grid ul { list-style:none; padding:0; margin:0; }
+  .footer-grid ul li { margin-bottom:6px; }
+  .footer-brand img { max-height:44px; margin-bottom:12px; }
+  .footer-brand p { color:#9fb0c3; }
+  .footer-brand .contact-line { color:#fff; font-weight:600; }
+  .footer-bottom { max-width:1140px; margin:32px auto 0; padding:20px 20px 0;
+                   border-top:1px solid rgba(255,255,255,.1);
+                   display:flex; justify-content:space-between; align-items:center;
+                   flex-wrap:wrap; gap:12px; font-size:13px; color:#9fb0c3; }
+  .footer-bottom .socials a { display:inline-block; margin-right:14px; font-size:18px; }
+  @media (max-width: 768px) {
+    .footer-grid { grid-template-columns:1fr; gap:28px; }
+    .footer-bottom { flex-direction:column; text-align:center; }
+  }
+</style>
+<footer class="site-footer" id="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="/"><img src="/images/logo.png" alt="Cyberal Solutions" class="lozad"></a>
+      <p>Managed IT &amp; cybersecurity for small businesses across southeast Ohio and the Mid-Ohio Valley.</p>
+      <p>
+        <a class="contact-line" href="tel:+17403158211">(740) 315-8211</a><br>
+        <a href="mailto:info@cyberalsolutions.com">info@cyberalsolutions.com</a><br>
+        Beverly, Ohio
+      </p>
     </div>
-    <div class="grid">
-      <div class="col-span-full">
-        <div class="social-icon">
-          <ul class="list-inline">
-            <li class="list-inline-item"><a href="https://www.facebook.com/CyberalSolutions/" target="_blank" rel="noopener" aria-label="Facebook"><i class="ti-facebook"></i></a></li>
-            <li class="list-inline-item"><a href="https://www.linkedin.com/company/cyberalsolutions/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ti-linkedin"></i></a></li>
-          </ul>
-        </div>
-        <div class="copyright text-center">
-          <div class="text-sm text-muted">&copy; Cyberal Solutions &middot; Beverly, Ohio &middot; <a href="tel:+17403158211">(740) 315-8211</a></div>
-        </div>
-      </div>
+    <div>
+      <h4>Company</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/pricing/">Pricing</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/contact/">Contact</a></li>
+        <li><a href="/review/">Free IT Review</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <ul>
+        <li><a href="/services/">Managed IT Support</a></li>
+        <li><a href="/services/">Managed Cybersecurity</a></li>
+        <li><a href="/services/">Microsoft 365 &amp; Cloud</a></li>
+        <li><a href="/services/">Backup &amp; Recovery</a></li>
+        <li><a href="/services/">Network Management</a></li>
+        <li><a href="/services/">IT Consulting / vCIO</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Areas We Serve</h4>
+      <ul>
+        <li>Marietta, OH</li>
+        <li>Beverly, OH</li>
+        <li>Devola, OH</li>
+        <li>Belpre, OH</li>
+        <li>Lower Salem, OH</li>
+        <li>Williamstown, WV</li>
+        <li>Parkersburg, WV</li>
+        <li>Vienna, WV</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>&copy; Cyberal Solutions &middot; Beverly, Ohio</div>
+    <div class="socials">
+      <a href="https://www.facebook.com/CyberalSolutions/" target="_blank" rel="noopener" aria-label="Facebook"><i class="ti-facebook"></i></a>
+      <a href="https://www.linkedin.com/company/cyberalsolutions/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ti-linkedin"></i></a>
     </div>
   </div>
 </footer>
 
-<!-- Sticky mobile call bar: huge lead-capture boost on phones -->
+<!-- Sticky mobile call bar -->
 <style>
   .mobile-call-bar { display:none; }
   @media (max-width: 768px) {
     .mobile-call-bar {
-      display: flex;
-      position: fixed;
-      left: 0; right: 0; bottom: 0;
-      z-index: 9999;
-      background: #0a2540;
-      box-shadow: 0 -2px 12px rgba(0,0,0,.25);
+      display:flex; position:fixed; left:0; right:0; bottom:0; z-index:9999;
+      background:#0a2540; box-shadow:0 -2px 12px rgba(0,0,0,.25);
     }
     .mobile-call-bar a {
-      flex: 1;
-      text-align: center;
-      padding: 14px 8px;
-      color: #fff;
-      font-weight: 600;
-      font-size: 15px;
-      text-decoration: none;
-      border-right: 1px solid rgba(255,255,255,.15);
+      flex:1; text-align:center; padding:14px 8px;
+      color:#fff; font-weight:600; font-size:15px; text-decoration:none;
+      border-right:1px solid rgba(255,255,255,.15);
     }
-    .mobile-call-bar a:last-child { border-right: none; }
+    .mobile-call-bar a:last-child { border-right:none; }
     .mobile-call-bar a.primary { background:#ff5a1f; }
-    body { padding-bottom: 56px; }
+    body { padding-bottom:56px; }
   }
 </style>
 <div class="mobile-call-bar" role="navigation" aria-label="Quick contact">
@@ -105,7 +112,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-8FWEE9W2L5');
 </script>
 <script src="/js/site-init.js"></script>
