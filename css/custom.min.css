@@ -417,3 +417,20 @@ header nav a:hover:after{width:100%}
 .bg-hero-home{background-image:url('../images/backgrounds/hero-home.jpg');background-size:cover;background-position:center}
 .bg-hero-pricing{background-image:url('../images/backgrounds/hero-pricing.jpg');background-size:cover;background-position:center}
 .bg-hero-review{background-image:url('../images/backgrounds/hero-review.jpg');background-size:cover;background-position:center}
+
+/* Wider container for grid sections */
+.content-wide{max-width:1200px;margin-left:auto;margin-right:auto;padding:0 1rem}
+
+/* Skills band desktop: 2-col layout (header sticky-ish on left, steps grid on right) */
+@media (min-width:960px){
+	.skills-band{grid-template-columns:minmax(280px,360px) 1fr;align-items:start;padding:2.5rem 2.5rem}
+	.skills-flow{border-left:none;padding-left:0;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.25rem 2rem}
+}
+
+/* Homepage contact section: 2-col on desktop */
+#contact .contact-grid{display:grid;gap:2rem;align-items:start}
+@media (min-width:768px){
+	#contact .contact-grid{grid-template-columns:1fr 1fr}
+	#contact .contact-grid .text-center{text-align:left}
+	#contact .contact-grid .flex{justify-content:flex-start}
+}
