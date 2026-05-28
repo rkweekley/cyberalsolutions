@@ -45,12 +45,36 @@
             "addressRegion": "OH",
             "addressCountry": "US"
           },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+              "opens": "08:00",
+              "closes": "17:00"
+            }
+          ],
           "areaServed": [
-            { "@type": "City", "name": "Beverly, OH" },
             { "@type": "City", "name": "Marietta, OH" },
+            { "@type": "City", "name": "Beverly, OH" },
+            { "@type": "City", "name": "Devola, OH" },
+            { "@type": "City", "name": "Lower Salem, OH" },
+            { "@type": "City", "name": "Belpre, OH" },
+            { "@type": "City", "name": "Williamstown, WV" },
+            { "@type": "City", "name": "Parkersburg, WV" },
+            { "@type": "City", "name": "Vienna, WV" },
             { "@type": "AdministrativeArea", "name": "Washington County, OH" },
+            { "@type": "AdministrativeArea", "name": "Wood County, WV" },
             { "@type": "State", "name": "Ohio" }
           ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Managed IT &amp; Cybersecurity Plans",
+            "itemListElement": [
+              { "@type": "Offer", "name": "Core IT Management", "priceCurrency": "USD", "price": "78", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "78", "priceCurrency": "USD", "unitText": "device/month" } },
+              { "@type": "Offer", "name": "Managed IT + Security", "priceCurrency": "USD", "price": "92", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "92", "priceCurrency": "USD", "unitText": "device/month" } },
+              { "@type": "Offer", "name": "Premium Security &amp; Compliance", "priceCurrency": "USD", "price": "118", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "118", "priceCurrency": "USD", "unitText": "device/month" } }
+            ]
+          },
           "sameAs": [
             "https://www.facebook.com/635879417023290"
           ]

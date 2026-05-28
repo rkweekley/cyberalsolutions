@@ -1,22 +1,102 @@
 <!-- Footer Navigation -->
 <footer id="footer" class="section-bg">
   <div class="container">
+    <div class="grid gap-8 md:grid-cols-4 py-10 text-left">
+      <div>
+        <a href="/index.html"><img src="/images/logo.png" alt="Cyberal Solutions" class="lozad" style="max-height:48px;"></a>
+        <p class="text-sm text-muted mt-3">Managed IT &amp; cybersecurity for small businesses in southeast Ohio and the Mid-Ohio Valley.</p>
+        <p class="text-sm mt-3">
+          <a href="tel:+17403158211"><strong>(740) 315-8211</strong></a><br>
+          <a href="mailto:info@cyberalsolutions.com">info@cyberalsolutions.com</a><br>
+          Beverly, Ohio
+        </p>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-3">Company</h4>
+        <ul class="text-sm space-y-2">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/services/">Services</a></li>
+          <li><a href="/pricing/">Pricing</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/contact/">Contact</a></li>
+          <li><a href="/review/">Free IT Review</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-3">Services</h4>
+        <ul class="text-sm space-y-2">
+          <li><a href="/services/">Managed IT Support</a></li>
+          <li><a href="/services/">Managed Cybersecurity</a></li>
+          <li><a href="/services/">Microsoft 365 &amp; Cloud</a></li>
+          <li><a href="/services/">Backup &amp; Recovery</a></li>
+          <li><a href="/services/">Network Management</a></li>
+          <li><a href="/services/">IT Consulting / vCIO</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-3">Areas We Serve</h4>
+        <ul class="text-sm space-y-2">
+          <li>Marietta, OH</li>
+          <li>Beverly, OH</li>
+          <li>Devola, OH</li>
+          <li>Belpre, OH</li>
+          <li>Lower Salem, OH</li>
+          <li>Williamstown, WV</li>
+          <li>Parkersburg, WV</li>
+          <li>Vienna, WV</li>
+        </ul>
+      </div>
+    </div>
     <div class="grid">
       <div class="col-span-full">
         <div class="social-icon">
           <ul class="list-inline">
-            <li class="list-inline-item"><a href="https://www.facebook.com/CyberalSolutions/" target="_blank" rel="noopener"><i class="ti-facebook"></i></a></li>
-            <li class="list-inline-item"><a href="https://www.linkedin.com/company/cyberalsolutions/" target="_blank" rel="noopener"><i class="ti-linkedin"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.facebook.com/CyberalSolutions/" target="_blank" rel="noopener" aria-label="Facebook"><i class="ti-facebook"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.linkedin.com/company/cyberalsolutions/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ti-linkedin"></i></a></li>
           </ul>
         </div>
         <div class="copyright text-center">
-          <a href="/index.html"><img src="/images/logo.png" alt="Cyberal Solutions" class="lozad"></a>
-          <div class="text-sm text-muted">&copy; Cyberal Solutions</div>
+          <div class="text-sm text-muted">&copy; Cyberal Solutions &middot; Beverly, Ohio &middot; <a href="tel:+17403158211">(740) 315-8211</a></div>
         </div>
       </div>
     </div>
   </div>
 </footer>
+
+<!-- Sticky mobile call bar: huge lead-capture boost on phones -->
+<style>
+  .mobile-call-bar { display:none; }
+  @media (max-width: 768px) {
+    .mobile-call-bar {
+      display: flex;
+      position: fixed;
+      left: 0; right: 0; bottom: 0;
+      z-index: 9999;
+      background: #0a2540;
+      box-shadow: 0 -2px 12px rgba(0,0,0,.25);
+    }
+    .mobile-call-bar a {
+      flex: 1;
+      text-align: center;
+      padding: 14px 8px;
+      color: #fff;
+      font-weight: 600;
+      font-size: 15px;
+      text-decoration: none;
+      border-right: 1px solid rgba(255,255,255,.15);
+    }
+    .mobile-call-bar a:last-child { border-right: none; }
+    .mobile-call-bar a.primary { background:#ff5a1f; }
+    body { padding-bottom: 56px; }
+  }
+</style>
+<div class="mobile-call-bar" role="navigation" aria-label="Quick contact">
+  <a class="primary" href="tel:+17403158211" data-cta="mobile-bar-call">📞 Call</a>
+  <a href="sms:+17403158211" data-cta="mobile-bar-text">💬 Text</a>
+  <a href="/review/" data-cta="mobile-bar-review">Free Review</a>
+</div>
+
 <script src="/plugins/lazy-load/lozad.min.js"></script>
 <script src="/js/smooth-nav.js"></script>
 <script src="/js/mobile-menu.js"></script>
