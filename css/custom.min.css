@@ -414,3 +414,6 @@ header nav a:hover:after{width:100%}
 /* === uniform pill list for service areas / facts === */
 .pill-list{list-style:none;padding:0;margin:1rem 0 0;display:flex;flex-wrap:wrap;gap:.5rem}
 .pill-list li{background:rgba(0,151,167,.10);color:var(--heading);border:1px solid rgba(0,151,167,.25);border-radius:999px;padding:.35rem .85rem;font-size:.88rem}
+.bg-hero-home{background-image:url('../images/backgrounds/hero-home.jpg');background-size:cover;background-position:center}
+.bg-hero-pricing{background-image:url('../images/backgrounds/hero-pricing.jpg');background-size:cover;background-position:center}
+.bg-hero-review{background-image:url('../images/backgrounds/hero-review.jpg');background-size:cover;background-position:center}
