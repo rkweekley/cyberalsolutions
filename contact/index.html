@@ -51,31 +51,48 @@
 <body>
   <div data-include="/partials/header.html"></div>
   <main>
-    <section id="contact" class="contact-us section-bg">
-      <div class="container pb-5">
-        <div class="grid gap-6">
-          <div class="col-span-full">
-            <div class="title text-center">
-              <h1>Get in <span class="text-primary">touch</span></h1>
-              <div class="border-meghna"></div>
-              <p class="mt-4 text-muted">Tell us a little about your setup and what&rsquo;s bugging you. We usually reply within one business day.</p>
-            </div>
+
+    <section class="hero-area bg-cover bg-center bg-hero-contact">
+      <div class="container mx-auto py-24 text-center text-base-100">
+        <p class="text-sm uppercase tracking-wider opacity-90">Contact</p>
+        <h1 class="text-4xl md:text-5xl font-bold mt-3">Get in touch.</h1>
+        <p class="mt-4 text-lg md:text-xl">Tell us a little about your setup and what&rsquo;s bugging you. We usually reply within one business day.</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="content-wide">
+        <div class="feature-grid">
+          <div class="feature-card">
+            <span class="feature-icon"><i class="ti-mobile"></i></span>
+            <h3>Call</h3>
+            <p><a href="tel:+17403158211" data-cta="contact-call">(740) 315-8211</a><br><span class="text-muted" style="font-size:.88rem">Mon&ndash;Fri, 8&nbsp;a.m.&ndash;6&nbsp;p.m. ET</span></p>
           </div>
-          <div class="contact-info">
-            <h3>Reach us</h3>
-            <div class="contact-details">
-              <div class="con-info clearfix"><i class="ti-location-pin"></i><span>Beverly, Ohio</span></div>
-              <div class="con-info clearfix"><i class="ti-mobile"></i><span>Phone: <a href="tel:+17403158211">(740) 315-8211</a></span></div>
-              <div class="con-info clearfix"><i class="ti-email"></i><span>Email: <a href="mailto:info@cyberalsolutions.com">info@cyberalsolutions.com</a></span></div>
-            </div>
+          <div class="feature-card">
+            <span class="feature-icon"><i class="ti-email"></i></span>
+            <h3>Email</h3>
+            <p><a href="mailto:info@cyberalsolutions.com" data-cta="contact-email">info@cyberalsolutions.com</a><br><span class="text-muted" style="font-size:.88rem">One business day reply, usually faster.</span></p>
           </div>
-          <div class="text-center">
-            <p class="mb-4">Prefer Facebook Messenger? That works too.</p>
-            <a class="btn btn-primary" href="https://m.me/635879417023290" target="_blank" rel="noopener">Open Messenger</a>
+          <div class="feature-card">
+            <span class="feature-icon"><i class="ti-facebook"></i></span>
+            <h3>Messenger</h3>
+            <p><a href="https://m.me/635879417023290" target="_blank" rel="noopener" data-cta="contact-messenger">Open Messenger</a><br><span class="text-muted" style="font-size:.88rem">Quick questions? This works too.</span></p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-icon"><i class="ti-location-pin"></i></span>
+            <h3>Office</h3>
+            <p>Beverly, Ohio<br><span class="text-muted" style="font-size:.88rem">Serving Marietta &amp; Washington County, OH and the Mid-Ohio Valley.</span></p>
           </div>
         </div>
       </div>
     </section>
+
+    <section class="cta-band">
+      <h2>Or skip the chit-chat &mdash; book a free review.</h2>
+      <p>30 minutes. We look at your security, backups, and Microsoft 365 setup and tell you what we&rsquo;d fix first. No pitch.</p>
+      <a href="/review/" class="btn btn-primary" data-cta="contact-bottom-review">Book Free Review</a>
+    </section>
+
   </main>
   <div data-include="/partials/footer.html"></div>
 </body>
