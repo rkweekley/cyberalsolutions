@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <title>That Harmless-Looking Image Attachment Might Be a Phishing Page | Cyberal Solutions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Attackers are hiding phishing pages inside SVG image files to slip past email filters. How the trick works and how a small team can spot it.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://cyberalsolutions.com/blog/that-harmless-looking-image-attachment-might-be-a-phishing-page.html">
+  <meta property="og:site_name" content="Cyberal Solutions">
+  <meta property="og:title" content="That Harmless-Looking Image Attachment Might Be a Phishing Page">
+  <meta property="og:description" content="Attackers are hiding phishing pages inside SVG image files to slip past email filters. How the trick works and how a small team can spot it.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://cyberalsolutions.com/blog/that-harmless-looking-image-attachment-might-be-a-phishing-page.html">
+  <meta property="og:image" content="https://cyberalsolutions.com/images/blog/Deepfake.jpg">
+  <meta property="og:locale" content="en_US">
+  <meta property="article:published_time" content="2026-06-02">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="That Harmless-Looking Image Attachment Might Be a Phishing Page">
+  <meta name="twitter:description" content="Attackers are hiding phishing pages inside SVG image files to slip past email filters. How the trick works and how a small team can spot it.">
+  <meta name="twitter:image" content="https://cyberalsolutions.com/images/blog/Deepfake.jpg">
+  <link rel="stylesheet" href="../plugins/themify-icons/themify-icons.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="../css/style.min.css" media="screen">
+  <link rel="stylesheet" href="../css/custom.min.css" media="screen">
+  <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+  <link rel="icon" href="../images/favicon.png" type="image/x-icon">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "That Harmless-Looking Image Attachment Might Be a Phishing Page",
+      "description": "Attackers are hiding phishing pages inside SVG image files to slip past email filters. How the trick works and how a small team can spot it.",
+      "image": "https://cyberalsolutions.com/images/blog/Deepfake.jpg",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Cyberal Solutions",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://cyberalsolutions.com/images/logo.png"
+        }
+      },
+      "datePublished": "2026-06-02",
+      "dateModified": "2026-06-02",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://cyberalsolutions.com/blog/that-harmless-looking-image-attachment-might-be-a-phishing-page.html"
+      }
+    }
+  </script>
+  <script src="/js/include-partials.js" defer></script>
+</head>
+<body id="body">
+  <div data-include="/partials/header.html"></div>
+<section class="blog-post">
+  <div class="blog-post__header">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center">
+        <p class="text-sm text-primary font-semibold">Insights</p>
+        <h1>That Harmless-Looking Image Attachment Might Be a Phishing Page</h1>
+        <div class="blog-post__meta">
+          <span>Tuesday, June 2, 2026</span>
+        </div>
+      </div>
+      <div class="blog-post__media">
+        <img src="../images/blog/Deepfake.jpg" alt="A person looking warily at an email attachment on a laptop" loading="eager">
+      </div>
+    </div>
+  </div>
+  <div class="container mx-auto px-4">
+    <div class="max-w-3xl mx-auto blog-post__body">
+      <div class="post-single-content">
+        <p>Most people have learned to be wary of email attachments. A spreadsheet from a stranger, a zip file you were not expecting — those raise an eyebrow now. But an image? An image feels safe. It is just a picture. That instinct is exactly what attackers are exploiting in a wave of phishing we have been watching, and the file type at the center of it is one most people have never heard of: the SVG.</p>
+        <h2>TL;DR</h2>
+        <p>Attackers are sending phishing as SVG image attachments. Unlike a normal photo, an SVG can carry code, so opening one can quietly load a fake login page right in your browser. The defense is unchanged in spirit: do not open attachments you were not expecting, never type your password into a page you reached from an email, and tell your team that "it is just an image" is no longer a safe assumption.</p>
+        <h2>What an SVG is, and why it is different</h2>
+        <p>Most images — JPGs, PNGs — are just pixels. A grid of colored dots and nothing else. There is no behavior inside them. An SVG is a different animal. It is a "scalable vector graphic," and instead of pixels it is built from instructions written in text, the same family of code that builds web pages. That is what lets a logo stay crisp at any size.</p>
+        <p>The catch is that because an SVG is really a little document, it can contain scripts — active code that runs when the file is opened in a browser. A picture that can run code is a very different thing from a picture that just sits there. That is the door attackers walked through.</p>
+        <h2>How the attack plays out</h2>
+        <p>The email arrives looking ordinary. Often it poses as a shared document, a voicemail, a fax, or a signature request — something you might plausibly be waiting on. Attached is what appears to be an image file. Because email filters have historically treated images as harmless, the message often sails straight into the inbox.</p>
+        <p>You open the attachment. Instead of a picture, your browser quietly renders a login page — a near-perfect copy of Microsoft 365, your bank, or some other service you trust. Everything looks right. You type your username and password, and they go straight to the attacker. No alarm, no obvious download, no broken English. Just a convincing page that you opened yourself.</p>
+        <h2>How to spot it and shut it down</h2>
+        <p>The good news is that the human defenses against this are the same ones that stop ordinary phishing — they just need to extend to a file type people did not used to worry about.</p>
+        <p>Treat an unexpected attachment as suspect no matter what kind of file it claims to be, image included. Be especially wary of an attachment that, when opened, immediately asks you to log in — a real image never needs your password. When in doubt about a document someone "shared," go to the service directly in your browser and sign in there, rather than through anything the email handed you. And if a message creates a sense of urgency — a payment is overdue, an account will be closed, a voicemail is waiting — slow down. Urgency is the oldest lever in the book.</p>
+        <p>On the technical side, there is more that can be done. Many email systems can be configured to flag or strip SVG attachments, which few legitimate senders use for everyday business. Multi-factor authentication also softens the blow: if someone does hand over a password, a second factor can keep the account from opening. None of that replaces an alert team, but it raises the wall.</p>
+        <h2>The takeaway</h2>
+        <p>The lesson here is not "fear images." It is that the categories we use to decide what is safe are exactly what attackers study and bend. The rule that holds up is simpler than any file-type list: do not enter your password into a page you reached by opening something from your inbox. Reach the service yourself, every time, and most of these tricks fall apart.</p>
+        <p>If you want help tightening your email filtering or rolling out multi-factor authentication so a single click cannot cost you an account, that is a normal part of our <a href="https://cyberalsolutions.com/?utm_source=blog&amp;utm_medium=internal&amp;utm_campaign=svg-phishing#contact">free 30-minute IT review</a>. We work with small teams and ministries around Washington County, and we will tell you plainly what is worth doing.</p>
+      </div>
+        <div class="social-share pt-4">
+  <a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcyberalsolutions.com%2Fblog%2Fthat-harmless-looking-image-attachment-might-be-a-phishing-page.html" target="_blank"
+    rel="noopener" aria-label="">
+    <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small">
+      <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z" />
+        </svg>
+      </div>
+    </div>
+  </a>
+  <a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?text=That%20Harmless-Looking%20Image%20Attachment%20Might%20Be%20a%20Phishing%20Page&amp;url=https%3A%2F%2Fcyberalsolutions.com%2Fblog%2Fthat-harmless-looking-image-attachment-might-be-a-phishing-page.html"
+    target="_blank" rel="noopener" aria-label="">
+    <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small">
+      <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path
+            d="M23.44 4.83c-.8.37-1.5.38-2.22.02.93-.56.98-.96 1.32-2.02-.88.52-1.86.9-2.9 1.1-.82-.88-2-1.43-3.3-1.43-2.5 0-4.55 2.04-4.55 4.54 0 .36.03.7.1 1.04-3.77-.2-7.12-2-9.36-4.75-.4.67-.6 1.45-.6 2.3 0 1.56.8 2.95 2 3.77-.74-.03-1.44-.23-2.05-.57v.06c0 2.2 1.56 4.03 3.64 4.44-.67.2-1.37.2-2.06.08.58 1.8 2.26 3.12 4.25 3.16C5.78 18.1 3.37 18.74 1 18.46c2 1.3 4.4 2.04 6.97 2.04 8.35 0 12.92-6.92 12.92-12.93 0-.2 0-.4-.02-.6.9-.63 1.96-1.22 2.56-2.14z" />
+        </svg>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="mt-5">
+      </div>
+    </div>
+  </div>
+</section><div data-include="/partials/footer.html"></div>
+<!-- /footer -->
+</body>
+</html>
