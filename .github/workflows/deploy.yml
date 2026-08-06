@@ -49,7 +49,7 @@ jobs:
         uses: appleboy/ssh-action@v1.2.4
         with:
           host: cyberalsolutions.com
-          username: ${{ secrets.DEPLOY_USER }}
+          username: cyberal
           key: ${{ secrets.DEPLOY_SSH_KEY }}
           script: |
             set -e
