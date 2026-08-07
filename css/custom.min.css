@@ -434,3 +434,14 @@ header nav a:hover:after{width:100%}
 	#contact .contact-grid .text-center{text-align:left}
 	#contact .contact-grid .flex{justify-content:flex-start}
 }
+
+/* ---- Contact / review forms (Mailgun-backed) ---- */
+.hidden{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.form-row{margin-bottom:1rem}
+.form-row label{display:block;font-weight:600;color:var(--heading);margin-bottom:.35rem;font-size:.95rem}
+.form-row input,.form-row textarea{width:100%;padding:.65rem .8rem;border:1px solid var(--border,#d7dbe0);border-radius:.5rem;background:var(--card-bg,#fff);color:var(--heading);font:inherit;box-sizing:border-box}
+.form-row input:focus,.form-row textarea:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:var(--accent)}
+.form-status{font-size:.95rem;min-height:1.4em}
+.form-status.ok{color:#1e7e34;font-weight:600}
+.form-status.err{color:#c0392b;font-weight:600}
+button[type=submit][disabled]{opacity:.6;cursor:wait}

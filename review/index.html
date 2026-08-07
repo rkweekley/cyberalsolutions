@@ -137,6 +137,33 @@
             <div class="border-meghna"></div>
             <p class="mt-4 text-muted">Pick whichever way is easiest. We usually reply within one business day.</p>
           </div>
+          <form data-mailgun-form data-subject="Free IT review request" data-ga-event="review_form_submit" class="mt-8 text-left" novalidate>
+            <p class="hidden" aria-hidden="true">
+              <label>Leave this field empty <input type="text" name="company_website" tabindex="-1" autocomplete="off"></label>
+            </p>
+            <div class="form-row">
+              <label for="rf-name">Your name</label>
+              <input type="text" id="rf-name" name="name" required autocomplete="name">
+            </div>
+            <div class="form-row">
+              <label for="rf-email">Email</label>
+              <input type="email" id="rf-email" name="email" required autocomplete="email">
+            </div>
+            <div class="form-row">
+              <label for="rf-org">Business or organization</label>
+              <input type="text" id="rf-org" name="organization" autocomplete="organization">
+            </div>
+            <div class="form-row">
+              <label for="rf-size">Roughly how many devices? <span class="text-muted">(computers, phones, whatever)</span></label>
+              <input type="text" id="rf-size" name="device_count" placeholder="e.g. 8">
+            </div>
+            <div class="form-row">
+              <label for="rf-message">What&rsquo;s bugging you? <span class="text-muted">(optional)</span></label>
+              <textarea id="rf-message" name="message" rows="4" placeholder="Slow computers, email weirdness, that thing you keep putting off&hellip;"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-full" data-label="Request my review" data-cta="review-form-submit">Request my review</button>
+            <p class="form-status text-center mt-4" role="status" aria-live="polite"></p>
+          </form>
           <div class="contact-details mt-6 text-left">
             <div class="con-info clearfix"><i class="ti-mobile"></i><span>Phone or text: <a href="tel:+17403158211" data-cta="phone-book">(740) 315-8211</a></span></div>
             <div class="con-info clearfix"><i class="ti-email"></i><span>Email: <a href="mailto:info@cyberalsolutions.com?subject=Free%20IT%20Review" data-cta="email-book">info@cyberalsolutions.com</a></span></div>
@@ -145,7 +172,6 @@
           <div class="mt-6">
             <a class="btn btn-primary" href="https://m.me/635879417023290" target="_blank" rel="noopener" data-cta="messenger-book">Open Facebook Messenger</a>
           </div>
-          <p class="mt-6 text-sm text-muted">Prefer to send a few details first? <a href="/contact/">Use the contact page</a> and we&rsquo;ll come back to you.</p>
         </div>
       </div>
     </section>
@@ -217,5 +243,6 @@
       });
     })();
   </script>
+  <script src="/js/mailgun-form.js" defer></script>
 </body>
 </html>
