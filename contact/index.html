@@ -88,6 +88,40 @@
       </div>
     </section>
 
+    <section class="content-section content-section--alt">
+      <div class="content-narrow">
+        <div class="title text-center">
+          <h2>Send us a message</h2>
+          <div class="border-meghna"></div>
+        </div>
+        <p class="text-center">Tell us what&rsquo;s going on. We read everything and reply within one business day &mdash; usually faster.</p>
+
+        <form data-mailgun-form data-subject="Website contact form" data-ga-event="contact_form_submit" id="contact-form" class="mt-8" novalidate>
+          <p class="hidden" aria-hidden="true">
+            <label>Leave this field empty <input type="text" name="company_website" tabindex="-1" autocomplete="off"></label>
+          </p>
+          <div class="form-row">
+            <label for="cf-name">Your name</label>
+            <input type="text" id="cf-name" name="name" required autocomplete="name">
+          </div>
+          <div class="form-row">
+            <label for="cf-email">Email</label>
+            <input type="email" id="cf-email" name="email" required autocomplete="email">
+          </div>
+          <div class="form-row">
+            <label for="cf-org">Business or organization <span class="text-muted">(optional)</span></label>
+            <input type="text" id="cf-org" name="organization" autocomplete="organization">
+          </div>
+          <div class="form-row">
+            <label for="cf-message">What can we help with?</label>
+            <textarea id="cf-message" name="message" rows="5" required placeholder="Computers, email, security, whatever&rsquo;s bugging you&hellip;"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-full" data-label="Send message" data-cta="contact-form-submit">Send message</button>
+          <p class="form-status text-center mt-4" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
     <section class="cta-band">
       <h2>Or skip the chit-chat &mdash; book a free review.</h2>
       <p>30 minutes. We look at your security, backups, and Microsoft 365 setup and tell you what we&rsquo;d fix first. No pitch.</p>
@@ -96,5 +130,6 @@
 
   </main>
   <div data-include="/partials/footer.html"></div>
+  <script src="/js/mailgun-form.js" defer></script>
 </body>
 </html>
