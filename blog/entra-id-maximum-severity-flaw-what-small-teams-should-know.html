@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <title>A Maximum-Severity Flaw in Microsoft Entra ID: What It Is and Why Small Teams Should Care | Cyberal Solutions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Microsoft patched a CVSS 10.0 remote-code-execution flaw in Entra ID (the engine behind Microsoft 365 accounts). What the fuss is about and what a small team should actually do.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://cyberalsolutions.com/blog/entra-id-maximum-severity-flaw-what-small-teams-should-know.html">
+  <meta property="og:site_name" content="Cyberal Solutions">
+  <meta property="og:title" content="A Maximum-Severity Flaw in Microsoft Entra ID: What It Is and Why Small Teams Should Care">
+  <meta property="og:description" content="Microsoft patched a CVSS 10.0 remote-code-execution flaw in Entra ID (the engine behind Microsoft 365 accounts). What the fuss is about and what a small team should actually do.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://cyberalsolutions.com/blog/entra-id-maximum-severity-flaw-what-small-teams-should-know.html">
+  <meta property="og:image" content="https://cyberalsolutions.com/images/blog/MicrosoftSecurity.jpg">
+  <meta property="og:locale" content="en_US">
+  <meta property="article:published_time" content="2026-09-01">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="A Maximum-Severity Flaw in Microsoft Entra ID: What It Is and Why Small Teams Should Care">
+  <meta name="twitter:description" content="Microsoft patched a CVSS 10.0 remote-code-execution flaw in Entra ID. What it means and what a small team should do.">
+  <meta name="twitter:image" content="https://cyberalsolutions.com/images/blog/MicrosoftSecurity.jpg">
+  <link rel="stylesheet" href="../plugins/themify-icons/themify-icons.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="../css/style.min.css" media="screen">
+  <link rel="stylesheet" href="../css/custom.min.css" media="screen">
+  <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+  <link rel="icon" href="../images/favicon.png" type="image/x-icon">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "A Maximum-Severity Flaw in Microsoft Entra ID: What It Is and Why Small Teams Should Care",
+      "description": "Microsoft patched a CVSS 10.0 remote-code-execution flaw in Entra ID. What it means and what a small team should do.",
+      "image": "https://cyberalsolutions.com/images/blog/MicrosoftSecurity.jpg",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Cyberal Solutions",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://cyberalsolutions.com/images/logo.png"
+        }
+      },
+      "datePublished": "2026-09-01",
+      "dateModified": "2026-09-01",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://cyberalsolutions.com/blog/entra-id-maximum-severity-flaw-what-small-teams-should-know.html"
+      }
+    }
+  </script>
+  <script src="/js/include-partials.js" defer></script>
+</head>
+<body id="body">
+  <div data-include="/partials/header.html"></div>
+<section class="blog-post">
+  <div class="blog-post__header">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center">
+        <p class="text-sm text-primary font-semibold">Insights</p>
+        <h1>A Maximum-Severity Flaw in Microsoft Entra ID: What It Is and Why Small Teams Should Care</h1>
+        <div class="blog-post__meta">
+          <span>Tuesday, September 1, 2026</span>
+        </div>
+      </div>
+      <div class="blog-post__media">
+        <img src="../images/blog/MicrosoftSecurity.jpg" alt="A person reviewing security settings on a laptop screen showing account protection" loading="eager">
+      </div>
+    </div>
+  </div>
+  <div class="container mx-auto px-4">
+    <div class="max-w-3xl mx-auto blog-post__body">
+      <div class="post-single-content">
+        <p>In late August, Microsoft patched a vulnerability in something called Entra ID and gave it the highest severity rating its scoring system allows: a 10 out of 10. If your organization uses Microsoft 365, Outlook, Teams, or any Microsoft cloud service, this involves the engine that lets your people sign in. That sounds alarming, and a perfect score sounds worse. Here is the plain-English version of what happened, what the worst reading of it is, and — importantly — what actually changed and what you should do.</p>
+        <h2>TL;DR</h2>
+        <p>Microsoft fixed a critical remote-code-execution flaw in Entra ID, the sign-in and identity service behind Microsoft 365. Microsoft first described it as exploited in the wild, then corrected that statement, and the company says the issue is fully mitigated with no action required from customers. The real lesson for a small team is not panic about this one — it is that the identity layer is now where attackers aim, and that keeping sign-in secure (multi-factor authentication, watching for suspicious sign-ins) is the move that matters.</p>
+        <h2>What Entra ID is, and why a flaw there is a big deal</h2>
+        <p>Most people who work in a small office have never heard the name Entra ID. But they use it every day. When you sign into Outlook, Teams, or your Microsoft 365 portal, Entra ID is the service that checks your username and password, decides whether you are allowed in, and — if you have it turned on — asks for that second factor. It is the front door and the key ring of everything Microsoft in your world.</p>
+        <p>That is why a maximum-severity flaw in it gets attention. The vulnerability, tracked as CVE-2026-69836, involves something called deserialization of untrusted data. In plain terms, a carefully crafted piece of data sent over the network could, in the worst case, let an attacker run code they should not be allowed to run. When a flaw like this scores a 10, it means it is the kind of hole an attacker would genuinely want to walk through.</p>
+        <h2>The important part: what Microsoft actually said about exploitation</h2>
+        <p>This is where it pays to read carefully, because the headlines moved fast and the facts are more reassuring than the first pass suggested. Microsoft's initial disclosure described the flaw as exploited in the wild. That triggered a string of urgent stories. But Microsoft then updated its advisory to say the flaw had not in fact been exploited, and the current assessment from industry trackers reflects that correction — the vulnerability is fixed and there is no evidence it was actively used against customers.</p>
+        <p>Microsoft also stated the issue is "fully mitigated with no user action required." That phrase matters. It means the fix is on Microsoft's side — in the cloud service many users never see — rather than requiring every small business to roll out an update to their own computers. For most organizations reading this, there is no patch to chase and no maintenance window to schedule. The heavy lifting was done for you.</p>
+        <h2>Why this still matters for a small team</h2>
+        <p>Even when a particular vulnerability turns out to require no action, the pattern is worth a moment of your attention. Phishing and identity attacks are increasingly aimed at the sign-in layer, because that is the doorway to everything else. A convincing fake of a Microsoft login page, forgotten passwords reused across sites, sign-ins left unprotected by a second factor — these are the everyday risks that actually get small organizations, far more often than an esoteric flaw in a cloud service.</p>
+        <p>The practical checklist is short and it never goes out of date:</p>
+        <ul>
+          <li><strong>Turn on multi-factor authentication for every account that allows it.</strong> This is the single highest-value control a small team has.</li>
+          <li><strong>Watch for sign-ins you did not make.</strong> Microsoft 365 has a sign-in log; glancing at it periodically catches a lot.</li>
+          <li><strong>Treat "I was locked out" or "hurry, verify now" messages as suspicious.</strong> That is the shape of most identity attacks.</li>
+          <li><strong>Do not reuse passwords across work and personal accounts.</strong> A breach somewhere else becomes a breach here.</li>
+        </ul>
+        <p>The specific flaw will be patched and eventually forgotten. The habit of protecting the sign-in layer is what keeps a small organization from being the next one that gets burned.</p>
+        <h2>The takeaway</h2>
+        <p>A maximum-severity rating on a cloud identity service sounds like something that should keep you up at night. In this case, the honest read is: Microsoft fixed it on their side, no action is needed from you, and the briefly alarming "exploited in the wild" claim was walked back. The durable lesson is the one that applies all year round — the front door to your Microsoft world is worth locking properly, and that means multi-factor authentication and a habit of treating unexpected sign-in prompts with a raised eyebrow.</p>
+        <p>If you want help turning on multi-factor authentication across your Microsoft accounts, reviewing who has access, or just understanding what "securing your identity" should look like for a small team, that is how we spend our time. It starts with our <a href="https://cyberalsolutions.com/?utm_source=blog&amp;utm_medium=internal&amp;utm_campaign=entra-id-cve#contact">free 30-minute IT review</a>, and we work with small teams and ministries around Washington County.</p>
+      </div>
+        <div class="social-share pt-4">
+  <a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcyberalsolutions.com%2Fblog%2Fentra-id-maximum-severity-flaw-what-small-teams-should-know.html" target="_blank"
+    rel="noopener" aria-label="">
+    <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small">
+      <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z" />
+        </svg>
+      </div>
+    </div>
+  </a>
+  <a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?text=A%20Maximum-Severity%20Flaw%20in%20Microsoft%20Entra%20ID&amp;url=https%3A%2F%2Fcyberalsolutions.com%2Fblog%2Fentra-id-maximum-severity-flaw-what-small-teams-should-know.html"
+    target="_blank" rel="noopener" aria-label="">
+    <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small">
+      <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path
+            d="M23.44 4.83c-.8.37-1.5.38-2.22.02.93-.56.98-.96 1.32-2.02-.88.52-1.86.9-2.9 1.1-.82-.88-2-1.43-3.3-1.43-2.5 0-4.55 2.04-4.55 4.54 0 .36.03.7.1 1.04-3.77-.2-7.12-2-9.36-4.75-.4.67-.6 1.45-.6 2.3 0 1.56.8 2.95 2 3.77-.74-.03-1.44-.23-2.05-.57v.06c0 2.2 1.56 4.03 3.64 4.44-.67.2-1.37.2-2.06.08.58 1.8 2.26 3.12 4.25 3.16C5.78 18.1 3.37 18.74 1 18.46c2 1.3 4.4 2.04 6.97 2.04 8.35 0 12.92-6.92 12.92-12.93 0-.2 0-.4-.02-.6.9-.63 1.96-1.22 2.56-2.14z" />
+        </svg>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="mt-5">
+      </div>
+    </div>
+  </div>
+</section><div data-include="/partials/footer.html"></div>
+<!-- /footer -->
+</body>
+</html>
