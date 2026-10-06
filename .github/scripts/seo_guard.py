@@ -141,8 +141,36 @@ def check_internal_links():
         errors.append(f"{len(broken)} broken internal link(s):\n      " + "\n      ".join(broken[:15]))
 
 
+def check_image_references():
+    """Every <img src> and absolute self-hosted image URL must exist on disk.
+
+    Case-sensitive on purpose: the repo is edited on macOS (case-insensitive) but
+    served by static-web-server on Alpine Linux (case-sensitive), so `kidssaftey.jpg`
+    vs `KidsSaftey.jpg` looks fine locally and 404s in production. It did.
+    """
+    broken = []
+    pat = re.compile(r'src="((?:\.\./)*[^"]+\.(?:jpg|jpeg|png|webp|svg))"')
+    abs_pat = re.compile(r'https://cyberalsolutions\.com(/[^"\']+\.(?:jpg|jpeg|png|webp|svg))')
+    for p in ROOT.rglob("*.html"):
+        rel = str(p.relative_to(ROOT))
+        if rel.startswith(("plugins/", "author/")):
+            continue
+        html = p.read_text(encoding="utf-8", errors="ignore")
+        for src in pat.findall(html) + abs_pat.findall(html):
+            if src.startswith("http"):
+                continue
+            cand = (ROOT / src.lstrip("/")) if src.startswith("/") else (p.parent / src)
+            if not cand.exists():
+                broken.append(f"{rel} -> {src}")
+    if broken:
+        errors.append(
+            f"{len(broken)} image reference(s) do not exist (CASE-SENSITIVE — the host is Linux):\n"
+            "      " + "\n      ".join(sorted(set(broken))[:15])
+        )
+
+
 for fn in (check_homepage_matches_blog_index, check_no_orphan_posts, check_sitemap,
-           check_no_leaked_line_numbers, check_internal_links):
+           check_no_leaked_line_numbers, check_internal_links, check_image_references):
     try:
         fn()
     except Exception as e:  # a guard that crashes must not look like a pass
