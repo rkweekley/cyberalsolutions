@@ -1,6 +1,66 @@
 {
-  "Patching.jpg": {"source": "Pexels", "id": 34804000, "photographer": "Daniil Komov", "url": "https://www.pexels.com/photo/34804000/", "used_on": "blog/small-business-patching-rhythm-that-sticks.html", "downloaded": "2026-05-06"},
-  "reading-a-cve-without-losing-your-afternoon.jpg": {"source": "Pexels", "id": 5380603, "photographer": "Tima Miroshnichenko", "url": "https://www.pexels.com/photo/5380603/", "used_on": "blog/reading-a-cve-without-losing-your-afternoon.html", "downloaded": "2026-05-06"},
-  "why-sms-is-the-weakest-link-in-mfa-2026.jpg": {"source": "Pexels", "id": 7821762, "photographer": "RDNE Stock project", "url": "https://www.pexels.com/photo/7821762/", "used_on": "blog/why-sms-is-the-weakest-link-in-mfa-2026.html", "downloaded": "2026-05-06"},
-  "sep-2026-patch-tuesday-zero-day.jpg": {"source": "Pexels", "id": 34803994, "photographer": "Daniil Komov", "url": "https://www.pexels.com/photo/34803994/", "used_on": "blog/microsoft-september-2026-patch-tuesday-two-zero-days.html", "downloaded": "2026-09-14"}
+    "Patching.jpg": {
+        "source": "Pexels",
+        "id": 34804000,
+        "photographer": "Daniil Komov",
+        "url": "https://www.pexels.com/photo/34804000/",
+        "used_on": "blog/small-business-patching-rhythm-that-sticks.html",
+        "downloaded": "2026-05-06"
+    },
+    "reading-a-cve-without-losing-your-afternoon.jpg": {
+        "source": "Pexels",
+        "id": 5380603,
+        "photographer": "Tima Miroshnichenko",
+        "url": "https://www.pexels.com/photo/5380603/",
+        "used_on": "blog/reading-a-cve-without-losing-your-afternoon.html",
+        "downloaded": "2026-05-06"
+    },
+    "why-sms-is-the-weakest-link-in-mfa-2026.jpg": {
+        "source": "Pexels",
+        "id": 7821762,
+        "photographer": "RDNE Stock project",
+        "url": "https://www.pexels.com/photo/7821762/",
+        "used_on": "blog/why-sms-is-the-weakest-link-in-mfa-2026.html",
+        "downloaded": "2026-05-06"
+    },
+    "sep-2026-patch-tuesday-zero-day.jpg": {
+        "source": "Pexels",
+        "id": 34803994,
+        "photographer": "Daniil Komov",
+        "url": "https://www.pexels.com/photo/34803994/",
+        "used_on": "blog/microsoft-september-2026-patch-tuesday-two-zero-days.html",
+        "downloaded": "2026-09-14"
+    },
+    "website-security-headers.jpg": {
+        "source": "Pexels",
+        "id": 374563,
+        "photographer": "Digital Buggu",
+        "url": "https://www.pexels.com/photo/374563/",
+        "used_on": "blog/small-business-website-security-headers-check.html",
+        "downloaded": "2026-10-06"
+    },
+    "small-business-cyber-attack.jpg": {
+        "source": "Pexels",
+        "id": 4921886,
+        "photographer": "Ekaterina Belinskaya",
+        "url": "https://www.pexels.com/photo/4921886/",
+        "used_on": "blog/small-business-cyber-attack-first-72-hours.html",
+        "downloaded": "2026-10-06"
+    },
+    "passkeys-in-plain-english.jpg": {
+        "source": "Pexels",
+        "id": 12376016,
+        "photographer": "I'm Zion",
+        "url": "https://www.pexels.com/photo/12376016/",
+        "used_on": "blog/passkeys-in-plain-english.html",
+        "downloaded": "2026-10-06"
+    },
+    "first-website-checklist.jpg": {
+        "source": "Pexels",
+        "id": 7310202,
+        "photographer": "RDNE Stock project",
+        "url": "https://www.pexels.com/photo/7310202/",
+        "used_on": "blog/five-things-small-businesses-overlook-on-their-first-website.html",
+        "downloaded": "2026-10-06"
+    }
 }
