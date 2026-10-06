@@ -9,6 +9,7 @@ substitute: it fails the build when a derived list drifts from its source.
 
 Each failure prints exactly what to change. No dependencies beyond stdlib.
 """
+import json
 import re
 import sys
 import xml.etree.ElementTree as ET
@@ -141,6 +142,28 @@ def check_internal_links():
         errors.append(f"{len(broken)} broken internal link(s):\n      " + "\n      ".join(broken[:15]))
 
 
+def check_jsonld_hygiene():
+    """Every JSON-LD block must parse AND contain no HTML entities.
+
+    HTML entities are not decoded inside JSON-LD, so `&amp;` in a schema string is
+    published literally to Google as "&amp;". Found live on the homepage's OfferCatalog
+    ("Managed IT &amp; Cybersecurity Plans") and on /review/.
+    """
+    for p in ROOT.rglob("*.html"):
+        rel = str(p.relative_to(ROOT))
+        if rel.startswith("plugins/"):
+            continue
+        for i, b in enumerate(re.findall(r'<script type="application/ld\+json">(.*?)</script>',
+                                         p.read_text(encoding="utf-8", errors="ignore"), re.S)):
+            try:
+                json.loads(b)
+            except Exception as e:
+                errors.append(f"{rel}: JSON-LD block {i + 1} does not parse — {e}")
+            ents = re.findall(r"&(?:amp|mdash|ndash|rsquo|lsquo|ldquo|rdquo|nbsp|#\d+);", b)
+            if ents:
+                errors.append(f"{rel}: HTML entity {ents[0]} inside JSON-LD (it is not decoded there)")
+
+
 def check_image_references():
     """Every <img src> and absolute self-hosted image URL must exist on disk.
 
@@ -170,7 +193,8 @@ def check_image_references():
 
 
 for fn in (check_homepage_matches_blog_index, check_no_orphan_posts, check_sitemap,
-           check_no_leaked_line_numbers, check_internal_links, check_image_references):
+           check_no_leaked_line_numbers, check_internal_links, check_image_references,
+           check_jsonld_hygiene):
     try:
         fn()
     except Exception as e:  # a guard that crashes must not look like a pass
