@@ -324,9 +324,40 @@
     <div class="container">
       <div class="grid md:grid-cols-3 gap-6">
         <div class="col-span-full">
-          <div class="title text-center"><h2 id="home-blog-heading">Latest <span class="text-primary">Post</span></h2><div class="border-meghna"></div></div>
+          <div class="title text-center"><h2 id="home-blog-heading">Latest <span class="text-primary">Posts</span></h2><div class="border-meghna"></div></div>
         </div>
-        <div id="home-blog-items" class="grid gap-6 md:grid-cols-3 col-span-full"></div>
+        <div id="home-blog-items" class="grid gap-6 md:grid-cols-3 col-span-full">
+          <article aria-labelledby="home-featured-post-1" role="article" class="clearfix mb-4">
+            <div class="post-block">
+              <div class="media-wrapper"><img src="/images/blog/first-website-checklist.jpg" alt="A small business workspace with a laptop, packaging, and handwritten startup notes" class="lozad w-full h-auto" loading="lazy" decoding="async"></div>
+              <div class="content">
+                <h3 id="home-featured-post-1"><a href="/blog/five-things-small-businesses-overlook-on-their-first-website.html">Five Things Small Businesses Overlook on Their First Website</a></h3>
+                <p>Most first websites are technically fine and quietly underperforming. Five things owners miss, and the four you can fix in an afternoon.</p>
+                <a class="btn btn-ghost" href="/blog/five-things-small-businesses-overlook-on-their-first-website.html" aria-label="Read more: Five Things Small Businesses Overlook on Their First Website">Read more</a>
+              </div>
+            </div>
+          </article>
+          <article aria-labelledby="home-featured-post-2" role="article" class="clearfix mb-4">
+            <div class="post-block">
+              <div class="media-wrapper"><img src="/images/blog/passkeys-in-plain-english.jpg" alt="A hand holding a smartphone being unlocked with a fingerprint" class="lozad w-full h-auto" loading="lazy" decoding="async"></div>
+              <div class="content">
+                <h3 id="home-featured-post-2"><a href="/blog/passkeys-in-plain-english.html">Passkeys in Plain English</a></h3>
+                <p>Passkeys are worth adopting deliberately, not urgently. What they actually are, and the four objections worth taking seriously.</p>
+                <a class="btn btn-ghost" href="/blog/passkeys-in-plain-english.html" aria-label="Read more: Passkeys in Plain English">Read more</a>
+              </div>
+            </div>
+          </article>
+          <article aria-labelledby="home-featured-post-3" role="article" class="clearfix mb-4">
+            <div class="post-block">
+              <div class="media-wrapper"><img src="/images/blog/small-business-cyber-attack.jpg" alt="A closed sign hanging on the glass door of a small shop" class="lozad w-full h-auto" loading="lazy" decoding="async"></div>
+              <div class="content">
+                <h3 id="home-featured-post-3"><a href="/blog/small-business-cyber-attack-first-72-hours.html">What the First 72 Hours After a Small-Business Cyber Attack Look Like</a></h3>
+                <p>Owners describe the same three days every time. Contain first, investigate second, restore third &mdash; and test the backups before you need them.</p>
+                <a class="btn btn-ghost" href="/blog/small-business-cyber-attack-first-72-hours.html" aria-label="Read more: What the First 72 Hours After a Small-Business Cyber Attack Look Like">Read more</a>
+              </div>
+            </div>
+          </article>
+        </div>
         <div class="all-post text-center col-span-full"><a class="btn btn-primary" href="blog/index.html">View All Post</a></div>
       </div>
     </div>
@@ -362,122 +393,10 @@
 
 <div data-include="/partials/footer.html"></div>
 
-<!-- JS -->
-<script>
-  (function () {
-    var posts = [
-      {
-        title: "Church IT in 2026: Common Problems Ministries Face and How to Start Fixing Them",
-        href: "/blog/church-it-in-2026-common-problems-and-how-to-start-fixing-them.html",
-        image: "images/blog/ChurchSecurity.jpg",
-        excerpt: "A practical church IT guide to fixing aging hardware, weak Wi-Fi, access risks, backup gaps, and donation fraud exposure.",
-        ariaLabel: "Read more: Church IT in 2026: Common Problems Ministries Face and How to Start Fixing Them"
-      },
-      {
-        title: "Parental Safety Basics: Network Controls and Web Filtering for Families",
-        href: "/blog/parental-safety-basics-network-controls-and-web-filtering-for-families.html",
-        image: "images/blog/kidsafety2.jpg",
-        excerpt: "A simple family guide to layering safety habits, home network controls, and web filtering across kids, tweens, and teens.",
-        ariaLabel: "Read more: Parental Safety Basics: Network Controls and Web Filtering for Families"
-      },
-      {
-        title: "Keeping Kids Safer Online: What Parents Should Actually Watch For",
-        href: "/blog/keeping-kids-safer-online-what-parents-should-actually-watch-for.html",
-        image: "images/blog/KidsSaftey.jpg",
-        excerpt: "A parent-friendly guide to the online warning signs that matter most, from secret chats to bullying and unsafe contact.",
-        ariaLabel: "Read more: Keeping Kids Safer Online: What Parents Should Actually Watch For"
-      },
-      {
-        title: "Are You Doing MFA the Right Way in 2026?",
-        href: "/blog/are-you-doing-mfa-the-right-way-in-2026.html",
-        image: "images/blog/MFA.jpg",
-        excerpt: "MFA stops most account takeovers, but only if you use phishing-resistant methods.",
-        ariaLabel: "Read more: Are You Doing MFA the Right Way in 2026?"
-      },
-      {
-        title: "Secure Onboarding Checklist for New Clients",
-        href: "/blog/secure-onboarding-checklist-for-new-clients.html",
-        image: "images/blog/SecureOnboarding.png",
-        excerpt: "Standardize access, endpoints, backups, and training with a simple onboarding flow.",
-        ariaLabel: "Read more: Secure Onboarding Checklist for New Clients"
-      },
-      {
-        title: "AI Assistants at Work: Safe Rollout for SMB Teams",
-        href: "/blog/ai-assistants-at-work-safe-rollout-for-smb-teams.html",
-        image: "images/blog/AI.jpg",
-        excerpt: "Use approved tools, keep sensitive data out of prompts, and verify outputs.",
-        ariaLabel: "Read more: AI Assistants at Work: Safe Rollout for SMB Teams"
-      },
-      {
-        title: "Microsoft 365 Security Baseline Updates for 2026",
-        href: "/blog/microsoft-365-security-baseline-updates-for-2026.html",
-        image: "images/blog/MicrosoftSecurity.jpg",
-        excerpt: "Refresh identity, email, and sharing controls to match current threats.",
-        ariaLabel: "Read more: Microsoft 365 Security Baseline Updates for 2026"
-      },
-      {
-        title: "Phishing in the Age of Deepfakes: New Defenses",
-        href: "/blog/phishing-in-the-age-of-deepfakes-new-defenses.html",
-        image: "images/blog/Deepfake.jpg",
-        excerpt: "Verification steps and modern email controls stop AI-driven scams.",
-        ariaLabel: "Read more: Phishing in the Age of Deepfakes: New Defenses"
-      },
-      {
-        title: "Backup and Recovery in 2026: 3-2-1-1-0 in Practice",
-        href: "/blog/backup-and-recovery-in-2026-3-2-1-1-0-in-practice.html",
-        image: "images/blog/Backup.jpg",
-        excerpt: "Immutable backups and restore tests are the new minimum.",
-        ariaLabel: "Read more: Backup and Recovery in 2026: 3-2-1-1-0 in Practice"
-      },
-      {
-        title: "Windows 11 Refresh Planning for 2026: Budget and Security",
-        href: "/blog/windows-11-refresh-planning-for-2026-budget-and-security.html",
-        image: "images/blog/Windows11.jpg",
-        excerpt: "Plan a phased refresh that improves security, performance, and budget.",
-        ariaLabel: "Read more: Windows 11 Refresh Planning for 2026: Budget and Security"
-      },
-      {
-        title: "Zero Trust Basics for Small Business Networks",
-        href: "/blog/zero-trust-basics-for-small-business-networks.html",
-        image: "images/blog/ZeroTrust.jpg",
-        excerpt: "Verify access every time, segment networks, and limit privileges.",
-        ariaLabel: "Read more: Zero Trust Basics for Small Business Networks"
-      },
-      {
-        title: "Wi-Fi 7 and Office Networks: What to Upgrade",
-        href: "/blog/wi-fi-7-and-office-networks-what-to-upgrade.html",
-        image: "images/blog/Wifi.jpg",
-        excerpt: "Upgrade high-density areas first and keep WPA3 enabled.",
-        ariaLabel: "Read more: Wi-Fi 7 and Office Networks: What to Upgrade"
-      }
-    ];
-
-    var target = document.getElementById("home-blog-items");
-    if (!target || posts.length < 3) {
-      return;
-    }
-
-    var newest = posts.slice(0, 3);
-    var html = "";
-
-    newest.forEach(function (post, index) {
-      var headingId = "home-featured-post-" + (index + 1);
-      html +=
-        '<article aria-labelledby="' + headingId + '" role="article" class="clearfix mb-4">' +
-          '<div class="post-block">' +
-            '<div class="media-wrapper"><img src="' + post.image + '" alt="Image" class="lozad w-full h-auto"></div>' +
-            '<div class="content">' +
-              '<h3 id="' + headingId + '"><a href="' + post.href + '">' + post.title + '</a></h3>' +
-              '<p>' + post.excerpt + '</p>' +
-              '<a class="btn btn-ghost" href="' + post.href + '" aria-label="' + post.ariaLabel + '">Read more</a>' +
-            '</div>' +
-          '</div>' +
-        '</article>';
-    });
-
-    target.innerHTML = html;
-  })();
-</script>
+<!-- Latest-post cards above are STATIC on purpose. The previous version rendered
+     posts.slice(0,3) from a hand-maintained array and silently went stale, so new
+     blog posts never appeared here. .github/workflows/seo-guard.yml now fails the
+     build if these three drift from the newest three on /blog/. -->
 </body>
 </html>
 
