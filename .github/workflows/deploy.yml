@@ -3,14 +3,28 @@ name: Deploy
 on:
   push:
     branches: ["master"]
+  # Lets a human re-deploy from the Actions tab (or `gh workflow run deploy.yml`)
+  # without SSHing into the Mac and running the container swap by hand.
+  workflow_dispatch:
 
 env:
   IMAGE_NAME: ghcr.io/${{ github.repository }}
   CONTAINER_NAME: cyberalsolutions
 
+# Serialize deploys. Two merges seconds apart (e.g. #24 and #25) each trigger a run,
+# and without this both runs stop/rm/run the SAME container at the same time — which
+# can strand it removed or half-swapped. Queue them instead of cancelling:
+# cancelling mid-swap is what would actually leave the site down.
+concurrency:
+  group: deploy-master
+  cancel-in-progress: false
+
 jobs:
   build:
-    runs-on: ubuntu-latest
+    # Pinned rather than ubuntu-latest: `latest` migrates to Ubuntu 26 on 2026-10-19,
+    # and QEMU/binfmt behaviour is the one thing this workflow cannot lose.
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
     permissions:
       contents: read
       packages: write
@@ -19,21 +33,27 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v6
 
+      # All docker/* actions bumped to the majors that target Node 24. The previous
+      # v5/v3 set was Node 20, which GitHub force-runs on Node 24 today and removes
+      # outright next — the deprecation warning was the visible symptom.
       - name: Set up QEMU
-        uses: docker/setup-qemu-action@v3
+        uses: docker/setup-qemu-action@v4
 
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
+        uses: docker/setup-buildx-action@v4
 
       - name: Login to GitHub Container Registry
-        uses: docker/login-action@v3
+        uses: docker/login-action@v4
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build and push stage image
-        uses: docker/build-push-action@v5
+      # linux/arm64 only: the Mac Mini is Apple Silicon, and an AMD64 image will not
+      # pull there (`no matching manifest for linux/arm64/v8`). QEMU makes the
+      # emulated build cheap because the Dockerfile is a plain COPY of static files.
+      - name: Build and push ARM64 image
+        uses: docker/build-push-action@v7
         with:
           context: .
           file: Dockerfile
@@ -45,7 +65,11 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
-      - name: Deploy web application
+      # Must match the live container exactly (verified by `docker inspect` 2026-10-06):
+      # name `cyberalsolutions`, networks `nginx-proxy-manager_default` + `mac`,
+      # restart unless-stopped, and NO published host port — NPM reaches it
+      # container-to-container as cyberalsolutions:80.
+      - name: Deploy on the Mac Mini
         uses: appleboy/ssh-action@v1.2.4
         with:
           host: cyberalsolutions.com
@@ -67,3 +91,28 @@ jobs:
             docker network connect mac ${{ env.CONTAINER_NAME }} || true
 
             docker image prune -f
+
+            # Fail the run if the container did not actually come up, rather than
+            # reporting a green deploy that left the site down.
+            running=$(docker inspect -f '{{.State.Running}}' ${{ env.CONTAINER_NAME }} 2>/dev/null || echo false)
+            echo "container running: ${running}"
+            if [ "$running" != "true" ]; then
+              echo "container failed to start"
+              docker logs --tail 40 ${{ env.CONTAINER_NAME }} || true
+              exit 1
+            fi
+
+      # End-to-end proof from the runner: DNS -> NPM -> TLS -> container.
+      - name: Verify the deployed site
+        run: |
+          for attempt in 1 2 3 4 5 6; do
+            code=$(curl -s -o /dev/null -m 15 -w '%{http_code}' https://cyberalsolutions.com/)
+            if [ "$code" = "200" ]; then
+              echo "verified: https://cyberalsolutions.com/ returned HTTP $code"
+              exit 0
+            fi
+            echo "attempt ${attempt}: HTTP $code, retrying in 5s"
+            sleep 5
+          done
+          echo "::error::Deploy verification failed — the site is not serving 200"
+          exit 1
