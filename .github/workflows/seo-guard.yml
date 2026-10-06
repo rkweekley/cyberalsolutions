@@ -1,0 +1,23 @@
+name: SEO Guard
+
+# Static sites have no build step to keep derived lists in sync, so this is the
+# substitute. It exists because the homepage "Latest Posts" widget was a
+# hand-maintained JS array that silently went stale — new blog posts never showed
+# up on the homepage, and nothing failed when they didn't.
+
+on:
+  pull_request:
+  push:
+    branches: ["master"]
+  workflow_dispatch:
+
+jobs:
+  seo-guard:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+
+      - name: Run SEO guard
+        run: python3 .github/scripts/seo_guard.py
