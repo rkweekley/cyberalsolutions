@@ -417,6 +417,8 @@ header nav a:hover:after{width:100%}
 .bg-hero-home{background-image:url('../images/backgrounds/hero-home.jpg');background-size:cover;background-position:center}
 .bg-hero-pricing{background-image:url('../images/backgrounds/hero-pricing.jpg');background-size:cover;background-position:center}
 .bg-hero-review{background-image:url('../images/backgrounds/hero-review.jpg');background-size:cover;background-position:center}
+.bg-hero-breakfix{background-image:url('../images/backgrounds/hero-services.jpg');background-size:cover;background-position:center}
+.bg-hero-repair{background-image:url('../images/backgrounds/hero-about.jpg');background-size:cover;background-position:center}
 
 /* Wider container for grid sections */
 .content-wide{max-width:1200px;margin-left:auto;margin-right:auto;padding:0 1rem}
